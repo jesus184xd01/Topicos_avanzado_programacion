@@ -1,0 +1,10 @@
+C:\Users\otaku\source\repos\Reservación\Reservación\bin\Debug\Reservación.exe.config
+C:\Users\otaku\source\repos\Reservación\Reservación\bin\Debug\Reservación.exe
+C:\Users\otaku\source\repos\Reservación\Reservación\bin\Debug\Reservación.pdb
+C:\Users\otaku\source\repos\Reservación\Reservación\obj\Debug\Reservación.csproj.AssemblyReference.cache
+C:\Users\otaku\source\repos\Reservación\Reservación\obj\Debug\Reservación.Form1.resources
+C:\Users\otaku\source\repos\Reservación\Reservación\obj\Debug\Reservación.Properties.Resources.resources
+C:\Users\otaku\source\repos\Reservación\Reservación\obj\Debug\Reservación.csproj.GenerateResource.cache
+C:\Users\otaku\source\repos\Reservación\Reservación\obj\Debug\Reservación.csproj.CoreCompileInputs.cache
+C:\Users\otaku\source\repos\Reservación\Reservación\obj\Debug\Reservación.exe
+C:\Users\otaku\source\repos\Reservación\Reservación\obj\Debug\Reservación.pdb

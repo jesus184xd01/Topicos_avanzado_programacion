@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\otaku\\source\\repos\\Reservaci\u00F3n\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|c:\\users\\otaku\\source\\repos\\reservaci\u00F3n\\reservaci\u00F3n\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|solutionrelative:reservaci\u00F3n\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|C:\\Users\\otaku\\source\\repos\\Reservaci\u00F3n\\reservaci\u00F3n\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|solutionrelative:reservaci\u00F3n\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\otaku\\source\\repos\\Reservaci\u00F3n\\Reservaci\u00F3n\\Form1.cs",
+              "RelativeDocumentMoniker": "Reservaci\u00F3n\\Form1.cs",
+              "ToolTip": "C:\\Users\\otaku\\source\\repos\\Reservaci\u00F3n\\Reservaci\u00F3n\\Form1.cs",
+              "RelativeToolTip": "Reservaci\u00F3n\\Form1.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAzwBUAAACPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T18:07:24.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\otaku\\source\\repos\\Reservaci\u00F3n\\Reservaci\u00F3n\\Form1.cs",
+              "RelativeDocumentMoniker": "Reservaci\u00F3n\\Form1.cs",
+              "ToolTip": "C:\\Users\\otaku\\source\\repos\\Reservaci\u00F3n\\Reservaci\u00F3n\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Reservaci\u00F3n\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-03T18:05:14.124Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
