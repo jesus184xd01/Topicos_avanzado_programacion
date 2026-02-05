@@ -19,3 +19,15 @@ C:\Users\admin\Documents\Topicos_avanzado_programacion\Reservación\Reservación
 C:\Users\admin\Documents\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.pdb
 C:\Users\admin\Documents\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Log_in_form.resources
 C:\Users\admin\Documents\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Reserva_form.resources
+C:\Users\otaku\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.csproj.AssemblyReference.cache
+C:\Users\otaku\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Log_in_form.resources
+C:\Users\otaku\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Reserva_form.resources
+C:\Users\otaku\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Properties.Resources.resources
+C:\Users\otaku\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.ucTarjetaAlojamiento.resources
+C:\Users\otaku\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.csproj.GenerateResource.cache
+C:\Users\otaku\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.csproj.CoreCompileInputs.cache
+C:\Users\otaku\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.exe
+C:\Users\otaku\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.pdb
+C:\Users\otaku\Topicos_avanzado_programacion\Reservación\Reservación\bin\Debug\Reservación.exe.config
+C:\Users\otaku\Topicos_avanzado_programacion\Reservación\Reservación\bin\Debug\Reservación.exe
+C:\Users\otaku\Topicos_avanzado_programacion\Reservación\Reservación\bin\Debug\Reservación.pdb
