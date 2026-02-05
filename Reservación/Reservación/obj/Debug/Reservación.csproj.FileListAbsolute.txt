@@ -19,3 +19,14 @@ C:\Users\admin\Documents\Topicos_avanzado_programacion\Reservación\Reservación
 C:\Users\admin\Documents\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.pdb
 C:\Users\admin\Documents\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Log_in_form.resources
 C:\Users\admin\Documents\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Reserva_form.resources
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\bin\Debug\Reservación.exe.config
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\bin\Debug\Reservación.exe
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\bin\Debug\Reservación.pdb
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.csproj.AssemblyReference.cache
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Log_in_form.resources
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Reserva_form.resources
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Properties.Resources.resources
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.csproj.GenerateResource.cache
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.csproj.CoreCompileInputs.cache
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.exe
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.pdb
