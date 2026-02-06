@@ -113,6 +113,11 @@ namespace Reservación
                 form.Show();
                 this.Hide();
             }
+            else
+            {
+
+                MessageBox.Show("No logeado");
+            }
         }
 
         private bool CorreoValido(string correo)
