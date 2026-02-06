@@ -8,7 +8,7 @@ namespace Reservación
 {
     public static class Validator
     {
-        public static User Validate(string username, string password)
+        public static User Validate(string username, string email, string password)
         {
             // validacion de las credenciales del usuario admin para poder ingresar
             if (username == "admin" && password == "password")
@@ -16,7 +16,8 @@ namespace Reservación
                 return new User
                 {
                     user_name = username,
-                    role = "Admin"
+                    role = "Admin",
+                    email = email
                 };
             }
 

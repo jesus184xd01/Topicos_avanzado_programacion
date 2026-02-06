@@ -19,15 +19,6 @@ namespace Reservación
             InitializeComponent();
         }
 
-        // cambio del form de log in al de reservacion
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            Reserva_form form = new Reserva_form();
-
-            form.Show();
-            this.Hide();
-        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -110,6 +101,18 @@ namespace Reservación
 
 
             MessageBox.Show("Datos correctos");
+
+            var user = Validator.Validate(
+                nombre,
+                correo,
+                password
+                );
+            if (user != null)
+            {
+                Reserva_form form = new Reserva_form();
+                form.Show();
+                this.Hide();
+            }
         }
 
         private bool CorreoValido(string correo)
