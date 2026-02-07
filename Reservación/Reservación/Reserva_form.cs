@@ -33,7 +33,7 @@ namespace Reservación
             var alojamientos = new[] {
                 new {
                     Titulo = "Departamento acogedor cerca del metro",
-                    Precio = "$1,400 MXN",
+                    Precio = "1400",
                     Imagenes = new Image[] {
                         Properties.Resources.departamento_0,
                         Properties.Resources.departamento_0_1,
@@ -45,7 +45,7 @@ namespace Reservación
                 },
                 new {
                     Titulo = "Departamento rústica en la playa",
-                    Precio = "$2,300 MXN",
+                    Precio = "2300",
                     Imagenes = new Image[] {
                         Properties.Resources.departamento_1,
                         Properties.Resources.departamento_1_1,
@@ -57,7 +57,7 @@ namespace Reservación
                 },
                 new {
                     Titulo = "Habitación privada económica",
-                    Precio = "$850 MXN",
+                    Precio = "850",
                     Imagenes = new Image[] {
                         Properties.Resources.departamento_2,
                         Properties.Resources.departamento_2_1,
@@ -69,7 +69,7 @@ namespace Reservación
                 },
                 new {
                     Titulo = "Cabana de lujo",
-                    Precio = "$4,800 MXN",
+                    Precio = "4800",
                     Imagenes = new Image[] {
                         Properties.Resources.departamento_3,
                         Properties.Resources.departamento_3_1,

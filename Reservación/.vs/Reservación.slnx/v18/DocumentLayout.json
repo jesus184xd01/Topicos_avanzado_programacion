@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|c:\\users\\admin\\documents\\topicos_avanzado_programacion\\reservaci\u00F3n\\reservaci\u00F3n\\reserva_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|c:\\users\\admin\\documents\\topicos_avanzado_programacion\\reservaci\u00F3n\\reservaci\u00F3n\\frmdetallealojamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|solutionrelative:reservaci\u00F3n\\frmdetallealojamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\reservaci\u00F3n\\frmdetallealojamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|solutionrelative:reservaci\u00F3n\\frmdetallealojamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\reservaci\u00F3n\\reserva_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|solutionrelative:reservaci\u00F3n\\reserva_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\reservaci\u00F3n\\reserva_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|solutionrelative:reservaci\u00F3n\\reserva_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\reservaci\u00F3n\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|solutionrelative:reservaci\u00F3n\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\reservaci\u00F3n\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,14 +39,6 @@
       "RelativeMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|solutionrelative:reservaci\u00F3n\\voucher_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\reservaci\u00F3n\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|solutionrelative:reservaci\u00F3n\\reservation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\reservaci\u00F3n\\frmdetallealojamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|solutionrelative:reservaci\u00F3n\\frmdetallealojamiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\reservaci\u00F3n\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|solutionrelative:reservaci\u00F3n\\validator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -54,47 +54,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Reserva_form.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Reserva_form.cs",
               "RelativeDocumentMoniker": "Reservaci\u00F3n\\Reserva_form.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Reserva_form.cs",
               "RelativeToolTip": "Reservaci\u00F3n\\Reserva_form.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAmwE0AAAA9AAAAAAAAAA==",
+              "ViewState": "AgIAACMAAAAAAAAAAAAuwEMAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T22:02:04.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-07T22:02:04.066Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Reserva_form.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Reserva_form.cs",
-              "RelativeDocumentMoniker": "Reservaci\u00F3n\\Reserva_form.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Reserva_form.cs [Design]",
-              "RelativeToolTip": "Reservaci\u00F3n\\Reserva_form.cs [Design]",
+              "Title": "frmDetalleAlojamiento.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\frmDetalleAlojamiento.cs",
+              "RelativeDocumentMoniker": "Reservaci\u00F3n\\frmDetalleAlojamiento.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\frmDetalleAlojamiento.cs [Design]",
+              "RelativeToolTip": "Reservaci\u00F3n\\frmDetalleAlojamiento.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T21:17:01.98Z"
+              "WhenOpened": "2026-02-07T21:16:03.966Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Program.cs",
-              "RelativeDocumentMoniker": "Reservaci\u00F3n\\Program.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Program.cs",
-              "RelativeToolTip": "Reservaci\u00F3n\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAswBMAAAAxAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "frmDetalleAlojamiento.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\frmDetalleAlojamiento.cs",
+              "RelativeDocumentMoniker": "Reservaci\u00F3n\\frmDetalleAlojamiento.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\frmDetalleAlojamiento.cs",
+              "RelativeToolTip": "Reservaci\u00F3n\\frmDetalleAlojamiento.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwEsAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T22:18:41.15Z"
+              "WhenOpened": "2026-02-07T22:32:15.801Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "Reservation.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Reservation.cs",
+              "RelativeDocumentMoniker": "Reservaci\u00F3n\\Reservation.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Reservation.cs",
+              "RelativeToolTip": "Reservaci\u00F3n\\Reservation.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAA5wA8AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T21:25:34.778Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Log_in_form.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Log_in_form.cs",
               "RelativeDocumentMoniker": "Reservaci\u00F3n\\Log_in_form.cs",
@@ -107,6 +120,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Program.cs",
+              "RelativeDocumentMoniker": "Reservaci\u00F3n\\Program.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Program.cs",
+              "RelativeToolTip": "Reservaci\u00F3n\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAswBMAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-07T22:18:41.15Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Log_in_form.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Log_in_form.cs",
               "RelativeDocumentMoniker": "Reservaci\u00F3n\\Log_in_form.cs",
@@ -117,7 +142,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Voucher_form.cs",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Voucher_form.cs",
               "RelativeDocumentMoniker": "Reservaci\u00F3n\\Voucher_form.cs",
@@ -129,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "Voucher_form.cs [Design]",
               "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Voucher_form.cs",
               "RelativeDocumentMoniker": "Reservaci\u00F3n\\Voucher_form.cs",
@@ -137,29 +162,6 @@
               "RelativeToolTip": "Reservaci\u00F3n\\Voucher_form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-07T22:13:16.346Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "frmDetalleAlojamiento.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\frmDetalleAlojamiento.cs",
-              "RelativeDocumentMoniker": "Reservaci\u00F3n\\frmDetalleAlojamiento.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\frmDetalleAlojamiento.cs [Design]",
-              "RelativeToolTip": "Reservaci\u00F3n\\frmDetalleAlojamiento.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T21:16:03.966Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Reservation.cs",
-              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Reservation.cs",
-              "RelativeDocumentMoniker": "Reservaci\u00F3n\\Reservation.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Reservation.cs",
-              "RelativeToolTip": "Reservaci\u00F3n\\Reservation.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwA0AAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T21:25:34.778Z"
             },
             {
               "$type": "Document",

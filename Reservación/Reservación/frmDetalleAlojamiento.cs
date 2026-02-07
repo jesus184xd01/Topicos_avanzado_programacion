@@ -16,6 +16,7 @@ namespace Reservación
         private User usuario_act;
         private string titulo_alojamiento;
         private string nombre_anfitrion;
+        private decimal precio_base;
         public frmDetalleAlojamiento(User usuario, string titulo, string precio, System.Drawing.Image[] imagenes, string anfitrion)
         {
             InitializeComponent();
@@ -24,6 +25,7 @@ namespace Reservación
             usuario_act = usuario;
             titulo_alojamiento = titulo;
             nombre_anfitrion = anfitrion;
+            precio_base = decimal.Parse(precio);
 
             lblTituloDetalle.Text = titulo;
             lblPrecioDetalle.Text = precio;
@@ -53,6 +55,7 @@ namespace Reservación
             reservacion.nights = (monthCalendar1.SelectionEnd - monthCalendar1.SelectionStart).Days + 1;
             reservacion.guests = (int)numericUpDown1.Value;
             reservacion.host = nombre_anfitrion;
+            reservacion.total = precio_base + 100 * reservacion.nights;
             reservacion.housing_name = titulo_alojamiento;
 
             // Pasar reservación al voucher
@@ -70,6 +73,7 @@ namespace Reservación
             DateTime fechaFin = e.End;
             int diasSeleccionados = (fechaFin - fechaInicio).Days + 1;
             lbl_noches.Text = $"{diasSeleccionados} noches";
+            lblPrecioDetalle.Text = $"${precio_base + 100 * diasSeleccionados}";
         }
     }
 }
