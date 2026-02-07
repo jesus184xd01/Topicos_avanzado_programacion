@@ -13,13 +13,18 @@ namespace Reservación
 {
     public partial class frmDetalleAlojamiento : Form
     {
-        public frmDetalleAlojamiento(string titulo, string precio, System.Drawing.Image imagen, string anfitrion)
+        public frmDetalleAlojamiento(string titulo, string precio, System.Drawing.Image[] imagenes, string anfitrion)
         {
             InitializeComponent();
 
             lblTituloDetalle.Text = titulo;
             lblPrecioDetalle.Text = precio;
-            picImagenDetalle1.Image = imagen;
+            picImagenDetalle1.Image = imagenes[0];
+            picImagenDetalle2.Image = imagenes[1];
+            picImagenDetalle3.Image = imagenes[2];
+            picImagenDetalle4.Image = imagenes[3];
+            picImagenDetalle5.Image = imagenes[4];
+
             lblAnfitrion.Text = "Anfitrión: " + anfitrion;
             
 

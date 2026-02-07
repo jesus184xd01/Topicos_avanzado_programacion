@@ -34,12 +34,55 @@ namespace Reservación
 
         private void CargarDatos()
         {
-            // Supongamos que tienes una lista o un bucle
             var alojamientos = new[] {
-                new { Titulo = "Departamento acogedor cerca del metro", Precio = "$1,400 MXN", Imagen = Properties.Resources.departamento_0, Anfitrion = "Ricardo Vega" },
-                new { Titulo = "Departamento rústica en la playa", Precio = "$2,300 MXN", Imagen = Properties.Resources.departamento_1, Anfitrion = "María López" },
-                new { Titulo = "Habitación privada económica", Precio = "$850 MXN", Imagen = Properties.Resources.departamento_2, Anfitrion = "Luis Navarro" },
-                new { Titulo = "Cabana de lujo", Precio = "$4,800 MXN", Imagen = Properties.Resources.departamento_3, Anfitrion = "Sofía Hernández" },
+                new {
+                    Titulo = "Departamento acogedor cerca del metro",
+                    Precio = "$1,400 MXN",
+                    Imagenes = new Image[] {
+                        Properties.Resources.departamento_0,
+                        Properties.Resources.departamento_0_1,
+                        Properties.Resources.departamento_0_2,
+                        Properties.Resources.departamento_0_3,
+                        Properties.Resources.departamento_0_4
+                    },
+                    Anfitrion = "Ricardo Vega"
+                },
+                new {
+                    Titulo = "Departamento rústica en la playa",
+                    Precio = "$2,300 MXN",
+                    Imagenes = new Image[] {
+                        Properties.Resources.departamento_1,
+                        Properties.Resources.departamento_1,
+                        Properties.Resources.departamento_1,
+                        Properties.Resources.departamento_1,
+                        Properties.Resources.departamento_1
+                    },
+                    Anfitrion = "María López"
+                },
+                new {
+                    Titulo = "Habitación privada económica",
+                    Precio = "$850 MXN",
+                    Imagenes = new Image[] {
+                        Properties.Resources.departamento_2,
+                        Properties.Resources.departamento_2,
+                        Properties.Resources.departamento_2,
+                        Properties.Resources.departamento_2,
+                        Properties.Resources.departamento_2
+                    },
+                    Anfitrion = "Luis Navarro"
+                },
+                new {
+                    Titulo = "Cabana de lujo",
+                    Precio = "$4,800 MXN",
+                    Imagenes = new Image[] {
+                        Properties.Resources.departamento_3,
+                        Properties.Resources.departamento_3,
+                        Properties.Resources.departamento_3,
+                        Properties.Resources.departamento_3,
+                        Properties.Resources.departamento_3
+                    },
+                    Anfitrion = "Sofía Hernández"
+                },
             };
 
 
@@ -48,7 +91,7 @@ namespace Reservación
                 ucTarjetaAlojamiento tarjeta = new ucTarjetaAlojamiento();
                 tarjeta.Titulo = datos.Titulo;
                 tarjeta.Precio = datos.Precio;
-                tarjeta.Imagen = datos.Imagen;
+                tarjeta.Imagen = datos.Imagenes[0];
                 tarjeta.Tag = datos;
 
                 tarjeta.TarjetaSeleccionada += (sender, e) =>
@@ -57,7 +100,7 @@ namespace Reservación
                     var d = t.Tag as dynamic;
 
                     frmDetalleAlojamiento detalle = new frmDetalleAlojamiento(
-                        d.Titulo, d.Precio, d.Imagen, d.Anfitrion
+                        d.Titulo, d.Precio, d.Imagenes, d.Anfitrion
                     );
                     detalle.ShowDialog();
                 };
