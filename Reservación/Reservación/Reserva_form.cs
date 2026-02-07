@@ -12,20 +12,16 @@ namespace Reservación
 {
     public partial class Reserva_form : Form
     {
-        public Reserva_form()
+        private User user_act;
+        public Reserva_form(User user)
         {
             InitializeComponent();
+            this.user_act = user;
             CargarDatos();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-
-            // redireccion hacia el voucher de la reservacion
-            Voucher_form form = new Voucher_form();
-            form.Show();
-            this.Close();
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
@@ -100,13 +96,18 @@ namespace Reservación
                     var d = t.Tag as dynamic;
 
                     frmDetalleAlojamiento detalle = new frmDetalleAlojamiento(
-                        d.Titulo, d.Precio, d.Imagenes, d.Anfitrion
+                        user_act, d.Titulo, d.Precio, d.Imagenes, d.Anfitrion
                     );
                     detalle.ShowDialog();
                 };
 
                 flowLayoutPanel1.Controls.Add(tarjeta);
             }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

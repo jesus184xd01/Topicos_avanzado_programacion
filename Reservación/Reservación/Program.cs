@@ -14,9 +14,10 @@ namespace Reservación
         [STAThread]
         static void Main()
         {
+            User user = new User();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Reserva_form());
+            Application.Run(new Reserva_form(user));
         }
     }
 }

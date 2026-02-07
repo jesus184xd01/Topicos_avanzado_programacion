@@ -37,9 +37,6 @@ namespace Reservación
         // cambio del form de log in al de reservacion
         private void button1_Click(object sender, EventArgs e)
         {
-            Reserva_form form = new Reserva_form();
-            form.Show();
-            this.Hide();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -178,7 +175,7 @@ namespace Reservación
                 );
             if (user != null)
             {
-                Reserva_form form = new Reserva_form();
+                Reserva_form form = new Reserva_form(user);
                 form.Show();
                 this.Hide();
                 return true;

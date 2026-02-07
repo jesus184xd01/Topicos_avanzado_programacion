@@ -12,9 +12,11 @@ namespace Reservación
 {
     public partial class Voucher_form : Form
     {
-        public Voucher_form()
+        private Reservation reservacion;
+        public Voucher_form(Reservation reserva)
         {
             InitializeComponent();
+            this.reservacion = reserva;
         }
     }
 }

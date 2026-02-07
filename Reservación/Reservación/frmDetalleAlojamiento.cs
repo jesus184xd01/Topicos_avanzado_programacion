@@ -13,9 +13,17 @@ namespace Reservación
 {
     public partial class frmDetalleAlojamiento : Form
     {
-        public frmDetalleAlojamiento(string titulo, string precio, System.Drawing.Image[] imagenes, string anfitrion)
+        private User usuario_act;
+        private string titulo_alojamiento;
+        private string nombre_anfitrion;
+        public frmDetalleAlojamiento(User usuario, string titulo, string precio, System.Drawing.Image[] imagenes, string anfitrion)
         {
             InitializeComponent();
+
+            // Guardar datos
+            usuario_act = usuario;
+            titulo_alojamiento = titulo;
+            nombre_anfitrion = anfitrion;
 
             lblTituloDetalle.Text = titulo;
             lblPrecioDetalle.Text = precio;
@@ -35,20 +43,33 @@ namespace Reservación
 
         private void btnreservar_Click(object sender, EventArgs e)
         {
-            // numericUpDown = numericUpDown1.Value; // almacenar el valor en la clase
-            
-            Voucher_form form = new Voucher_form();
-                form.Show();
-                this.Close();
+            // Crear objeto Reservation simple
+            Reservation reservacion = new Reservation();
+
+            // Llenar datos con .set
+            reservacion.Client = usuario_act;
+            reservacion.checkIn = monthCalendar1.SelectionStart;
+            reservacion.checkOut = monthCalendar1.SelectionEnd;
+            reservacion.nights = (monthCalendar1.SelectionEnd - monthCalendar1.SelectionStart).Days + 1;
+            reservacion.guests = (int)numericUpDown1.Value;
+            reservacion.host = nombre_anfitrion;
+            reservacion.housing_name = titulo_alojamiento;
+
+            // Pasar reservación al voucher
+            Voucher_form form = new Voucher_form(reservacion);
+            form.Show();
+            this.Close();
         }
 
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
+            // Crear objeto Reservation simple
+            Reservation reservacion = new Reservation();
+
             DateTime fechaInicio = e.Start;
             DateTime fechaFin = e.End;
             int diasSeleccionados = (fechaFin - fechaInicio).Days + 1;
             lbl_noches.Text = $"{diasSeleccionados} noches";
-
         }
     }
 }
