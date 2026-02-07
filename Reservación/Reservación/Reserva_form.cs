@@ -20,7 +20,7 @@ namespace Reservación
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //label4.Text = "Reservación hecha para " + textBox1.Text + " " + textBox2.Text + " el día " + monthCalendar1.SelectionStart.ToShortDateString() + " en la habitación " + textBox3.Text;
+            
 
             // redireccion hacia el voucher de la reservacion
             Voucher_form form = new Voucher_form();
@@ -34,12 +34,32 @@ namespace Reservación
 
         private void CargarDatos()
         {
-            for(int i = 0; i < 6; i++)
+            // Supongamos que tienes una lista o un bucle
+            for (int i = 0; i < 5; i++)
             {
                 ucTarjetaAlojamiento tarjeta = new ucTarjetaAlojamiento();
-                tarjeta.Titulo = "Departamento en CDMX";
-                tarjeta.Precio = "$2000 MNX";
-                tarjeta.Margin = new Padding(15); //Espacio de separacion entre las tarjetas
+                tarjeta.Titulo = "Apartamento moderno #" + i;
+                tarjeta.Precio = "$1,500 MXN";
+                tarjeta.Imagen = Properties.Resources.depa1;
+
+                // EL MOMENTO CLAVE:
+                tarjeta.TarjetaSeleccionada += (sender, e) =>
+                {
+                    // Recuperamos la tarjeta que fue clickeada
+                    ucTarjetaAlojamiento t = (ucTarjetaAlojamiento)sender;
+
+                    // Abrimos el nuevo form pasando los datos de esa tarjeta
+                    // Nota: Aquí podrías pasar un nombre de anfitrión desde una base de datos
+                    frmDetalleAlojamiento detalle = new frmDetalleAlojamiento(
+                        t.Titulo,
+                        t.Precio,
+                        t.Imagen,
+                        
+                        "Juan Pérez" // Aquí iría el dato del anfitrión
+                    );
+
+                    detalle.ShowDialog(); // ShowDialog lo abre como ventana modal
+                };
 
                 flowLayoutPanel1.Controls.Add(tarjeta);
             }

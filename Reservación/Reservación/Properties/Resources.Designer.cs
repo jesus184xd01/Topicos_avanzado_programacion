@@ -63,6 +63,16 @@ namespace Reservación.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap depa1 {
+            get {
+                object obj = ResourceManager.GetObject("depa1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap logo_orange {
             get {
                 object obj = ResourceManager.GetObject("logo_orange", resourceCulture);

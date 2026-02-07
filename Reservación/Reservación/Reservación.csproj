@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmDetalleAlojamiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDetalleAlojamiento.Designer.cs">
+      <DependentUpon>frmDetalleAlojamiento.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reservation.cs" />
     <Compile Include="Reserva_form.cs">
       <SubType>Form</SubType>
@@ -75,6 +81,9 @@
     <Compile Include="Voucher_form.Designer.cs">
       <DependentUpon>Voucher_form.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmDetalleAlojamiento.resx">
+      <DependentUpon>frmDetalleAlojamiento.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Log_in_form.resx">
       <DependentUpon>Log_in_form.cs</DependentUpon>
     </EmbeddedResource>
