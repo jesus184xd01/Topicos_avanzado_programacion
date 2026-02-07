@@ -16,7 +16,7 @@ namespace Reservación
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Log_in_form());
+            Application.Run(new Reserva_form());
         }
     }
 }

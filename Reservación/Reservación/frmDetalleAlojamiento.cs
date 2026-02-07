@@ -36,5 +36,14 @@ namespace Reservación
                 form.Show();
                 this.Close();
         }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            DateTime fechaInicio = e.Start;
+            DateTime fechaFin = e.End;
+            int diasSeleccionados = (fechaFin - fechaInicio).Days + 1;
+            lbl_noches.Text = $"{diasSeleccionados} noches";
+
+        }
     }
 }

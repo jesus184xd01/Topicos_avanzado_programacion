@@ -35,30 +35,31 @@ namespace Reservación
         private void CargarDatos()
         {
             // Supongamos que tienes una lista o un bucle
-            for (int i = 0; i < 5; i++)
+            var alojamientos = new[] {
+                new { Titulo = "Departamento acogedor cerca del metro", Precio = "$1,400 MXN", Imagen = Properties.Resources.departamento_0, Anfitrion = "Ricardo Vega" },
+                new { Titulo = "Departamento rústica en la playa", Precio = "$2,300 MXN", Imagen = Properties.Resources.departamento_1, Anfitrion = "María López" },
+                new { Titulo = "Habitación privada económica", Precio = "$850 MXN", Imagen = Properties.Resources.departamento_2, Anfitrion = "Luis Navarro" },
+                new { Titulo = "Cabana de lujo", Precio = "$4,800 MXN", Imagen = Properties.Resources.departamento_3, Anfitrion = "Sofía Hernández" },
+            };
+
+
+            foreach (var datos in alojamientos)
             {
                 ucTarjetaAlojamiento tarjeta = new ucTarjetaAlojamiento();
-                tarjeta.Titulo = "Apartamento moderno #" + i;
-                tarjeta.Precio = "$1,500 MXN";
-                tarjeta.Imagen = Properties.Resources.depa1;
+                tarjeta.Titulo = datos.Titulo;
+                tarjeta.Precio = datos.Precio;
+                tarjeta.Imagen = datos.Imagen;
+                tarjeta.Tag = datos;
 
-                // EL MOMENTO CLAVE:
                 tarjeta.TarjetaSeleccionada += (sender, e) =>
                 {
-                    // Recuperamos la tarjeta que fue clickeada
-                    ucTarjetaAlojamiento t = (ucTarjetaAlojamiento)sender;
+                    var t = (ucTarjetaAlojamiento)sender;
+                    var d = t.Tag as dynamic;
 
-                    // Abrimos el nuevo form pasando los datos de esa tarjeta
-                    // Nota: Aquí podrías pasar un nombre de anfitrión desde una base de datos
                     frmDetalleAlojamiento detalle = new frmDetalleAlojamiento(
-                        t.Titulo,
-                        t.Precio,
-                        t.Imagen,
-                        
-                        "Juan Pérez" // Aquí iría el dato del anfitrión
+                        d.Titulo, d.Precio, d.Imagen, d.Anfitrion
                     );
-
-                    detalle.ShowDialog(); // ShowDialog lo abre como ventana modal
+                    detalle.ShowDialog();
                 };
 
                 flowLayoutPanel1.Controls.Add(tarjeta);

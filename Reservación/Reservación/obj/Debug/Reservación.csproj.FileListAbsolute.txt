@@ -30,3 +30,5 @@ C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_progra
 C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.csproj.CoreCompileInputs.cache
 C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.exe
 C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.pdb
+C:\Users\admin\Documents\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.frmDetalleAlojamiento.resources
+C:\Users\admin\Documents\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.ucTarjetaAlojamiento.resources
