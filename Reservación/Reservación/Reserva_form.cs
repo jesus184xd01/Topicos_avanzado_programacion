@@ -48,10 +48,10 @@ namespace Reservación
                     Precio = "$2,300 MXN",
                     Imagenes = new Image[] {
                         Properties.Resources.departamento_1,
-                        Properties.Resources.departamento_1,
-                        Properties.Resources.departamento_1,
-                        Properties.Resources.departamento_1,
-                        Properties.Resources.departamento_1
+                        Properties.Resources.departamento_1_1,
+                        Properties.Resources.departamento_1_2,
+                        Properties.Resources.departamento_1_3,
+                        Properties.Resources.departamento_1_4
                     },
                     Anfitrion = "María López"
                 },
@@ -60,10 +60,10 @@ namespace Reservación
                     Precio = "$850 MXN",
                     Imagenes = new Image[] {
                         Properties.Resources.departamento_2,
-                        Properties.Resources.departamento_2,
-                        Properties.Resources.departamento_2,
-                        Properties.Resources.departamento_2,
-                        Properties.Resources.departamento_2
+                        Properties.Resources.departamento_2_1,
+                        Properties.Resources.departamento_2_2,
+                        Properties.Resources.departamento_2_3,
+                        Properties.Resources.departamento_2_4
                     },
                     Anfitrion = "Luis Navarro"
                 },
@@ -72,10 +72,10 @@ namespace Reservación
                     Precio = "$4,800 MXN",
                     Imagenes = new Image[] {
                         Properties.Resources.departamento_3,
-                        Properties.Resources.departamento_3,
-                        Properties.Resources.departamento_3,
-                        Properties.Resources.departamento_3,
-                        Properties.Resources.departamento_3
+                        Properties.Resources.departamento_3_1,
+                        Properties.Resources.departamento_3_2,
+                        Properties.Resources.departamento_3_3,
+                        Properties.Resources.departamento_3_4
                     },
                     Anfitrion = "Sofía Hernández"
                 },
