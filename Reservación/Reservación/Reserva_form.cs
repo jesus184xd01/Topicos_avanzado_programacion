@@ -86,7 +86,7 @@ namespace Reservación
             {
                 ucTarjetaAlojamiento tarjeta = new ucTarjetaAlojamiento();
                 tarjeta.Titulo = datos.Titulo;
-                tarjeta.Precio = datos.Precio;
+                tarjeta.Precio = "$" + datos.Precio + " MXN";
                 tarjeta.Imagen = datos.Imagenes[0];
                 tarjeta.Tag = datos;
 

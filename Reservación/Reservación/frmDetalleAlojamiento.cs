@@ -28,7 +28,7 @@ namespace Reservación
             precio_base = decimal.Parse(precio);
 
             lblTituloDetalle.Text = titulo;
-            lblPrecioDetalle.Text = precio;
+            lblPrecioDetalle.Text = "$" + precio + " MXN";
             picImagenDetalle1.Image = imagenes[0];
             picImagenDetalle2.Image = imagenes[1];
             picImagenDetalle3.Image = imagenes[2];
@@ -73,7 +73,7 @@ namespace Reservación
             DateTime fechaFin = e.End;
             int diasSeleccionados = (fechaFin - fechaInicio).Days + 1;
             lbl_noches.Text = $"{diasSeleccionados} noches";
-            lblPrecioDetalle.Text = $"${precio_base + 100 * diasSeleccionados}";
+            lblPrecioDetalle.Text = $"${precio_base + 100 * diasSeleccionados} MXN";
         }
     }
 }
