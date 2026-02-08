@@ -32,3 +32,17 @@ C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_progra
 C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.pdb
 C:\Users\admin\Documents\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.frmDetalleAlojamiento.resources
 C:\Users\admin\Documents\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.ucTarjetaAlojamiento.resources
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\bin\Debug\Reservación.exe.config
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\bin\Debug\Reservación.exe
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\bin\Debug\Reservación.pdb
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.csproj.AssemblyReference.cache
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.frmDetalleAlojamiento.resources
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Log_in_form.resources
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Reserva_form.resources
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Properties.Resources.resources
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.ucTarjetaAlojamiento.resources
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Voucher_form.resources
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.csproj.GenerateResource.cache
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.csproj.CoreCompileInputs.cache
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.exe
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.pdb

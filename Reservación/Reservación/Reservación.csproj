@@ -103,6 +103,9 @@
     <EmbeddedResource Include="ucTarjetaAlojamiento.resx">
       <DependentUpon>ucTarjetaAlojamiento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Voucher_form.resx">
+      <DependentUpon>Voucher_form.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
