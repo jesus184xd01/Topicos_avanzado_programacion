@@ -96,7 +96,7 @@ namespace Reservación
                     var d = t.Tag as dynamic;
 
                     frmDetalleAlojamiento detalle = new frmDetalleAlojamiento(
-                        user_act, d.Titulo, d.Precio, d.Imagenes, d.Anfitrion
+                        this, user_act, d.Titulo, d.Precio, d.Imagenes, d.Anfitrion
                     );
                     detalle.ShowDialog();
                 };

@@ -13,15 +13,17 @@ namespace Reservación
 {
     public partial class frmDetalleAlojamiento : Form
     {
+        private Form formulario_padre; // ← Guardar referencia
         private User usuario_act;
         private string titulo_alojamiento;
         private string nombre_anfitrion;
         private decimal precio_base;
-        public frmDetalleAlojamiento(User usuario, string titulo, string precio, System.Drawing.Image[] imagenes, string anfitrion)
+        public frmDetalleAlojamiento(Form padre, User usuario, string titulo, string precio, System.Drawing.Image[] imagenes, string anfitrion)
         {
             InitializeComponent();
 
             // Guardar datos
+            formulario_padre = padre;
             usuario_act = usuario;
             titulo_alojamiento = titulo;
             nombre_anfitrion = anfitrion;
@@ -58,6 +60,7 @@ namespace Reservación
             reservacion.total = precio_base + 100 * reservacion.nights;
             reservacion.housing_name = titulo_alojamiento;
 
+            formulario_padre?.Close(); // ← Cerrar el formulario padre
             // Pasar reservación al voucher
             Voucher_form form = new Voucher_form(reservacion);
             form.Show();

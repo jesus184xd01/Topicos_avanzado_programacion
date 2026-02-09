@@ -46,3 +46,4 @@ C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservaci�
 C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.csproj.CoreCompileInputs.cache
 C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.exe
 C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.pdb
+C:\Users\admin\Documents\Topicos_avanzado_programacion\Reservación\Reservación\obj\Debug\Reservación.Voucher_form.resources
