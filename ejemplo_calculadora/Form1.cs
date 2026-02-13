@@ -15,6 +15,7 @@ namespace ejemplo_calculadora
         #region Variables Privadas
         private bool nuevaEntrada = true;
         private bool modoInverso = false;
+        private bool modoRadianes = true; // true = Radianes, false = Grados
         private const int ANCHO_VENTANA = 330;
         private const int ALTO_VENTANA = 520;
         private PrivateFontCollection pfc = new PrivateFontCollection();
@@ -98,6 +99,10 @@ namespace ejemplo_calculadora
         {
             btn_raiz.Text = "√";
             btn_divid.Text = "÷";
+
+            // Configurar estado inicial del botón RAD/DEG
+            btn_rad.Text = "RAD";
+            btn_rad.BackColor = Color.LightGreen;
         }
         #endregion
 
@@ -178,8 +183,18 @@ namespace ejemplo_calculadora
                 string expresion = txt_screen.Text;
                 if (string.IsNullOrEmpty(expresion) || expresion == "0") return;
 
+                // DEBUG: Mostrar expresión original
+                System.Diagnostics.Debug.WriteLine($"1. Expresión original: {expresion}");
+
                 expresion = NormalizarExpresion(expresion);
+
+                // DEBUG: Mostrar expresión normalizada
+                System.Diagnostics.Debug.WriteLine($"2. Expresión normalizada: {expresion}");
+
                 double resultado = EvaluarExpresion(expresion);
+
+                // DEBUG: Mostrar resultado
+                System.Diagnostics.Debug.WriteLine($"3. Resultado: {resultado}");
 
                 if (double.IsNaN(resultado))
                     txt_screen.Text = "Error";
@@ -194,7 +209,11 @@ namespace ejemplo_calculadora
             {
                 txt_screen.Text = "Error";
                 nuevaEntrada = true;
-                MessageBox.Show($"Error al calcular: {ex.Message}", "Error de Cálculo",
+
+                // DEBUG: Mostrar error completo
+                System.Diagnostics.Debug.WriteLine($"ERROR COMPLETO: {ex.ToString()}");
+
+                MessageBox.Show($"Error al calcular: {ex.Message}\n\nExpresión: {txt_screen.Text}", "Error de Cálculo",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -233,7 +252,8 @@ namespace ejemplo_calculadora
             else
             {
                 char ultimo = textoActual[textoActual.Length - 1];
-                if (char.IsDigit(ultimo) || ultimo == ')' || ultimo == 'π')
+                // CORRECCIÓN: Usar TerminaEnNumero en lugar de char.IsDigit
+                if (TerminaEnNumero(textoActual) || ultimo == ')' || ultimo == 'π')
                     txt_screen.Text += "×(";
                 else
                     txt_screen.Text += "(";
@@ -262,7 +282,8 @@ namespace ejemplo_calculadora
             else
             {
                 char ultimo = textoActual[textoActual.Length - 1];
-                if (char.IsDigit(ultimo) || ultimo == ')' || ultimo == 'π')
+                // CORRECCIÓN: Usar TerminaEnNumero en lugar de char.IsDigit
+                if (TerminaEnNumero(textoActual) || ultimo == ')' || ultimo == 'π')
                     txt_screen.Text += "×√(";
                 else
                     txt_screen.Text += "√(";
@@ -288,7 +309,8 @@ namespace ejemplo_calculadora
             else
             {
                 char ultimo = textoActual[textoActual.Length - 1];
-                if (char.IsDigit(ultimo) || ultimo == ')' || ultimo == 'π')
+                // CORRECCIÓN: Usar TerminaEnNumero en lugar de char.IsDigit
+                if (TerminaEnNumero(textoActual) || ultimo == ')' || ultimo == 'π')
                     txt_screen.Text += "×π";
                 else
                     txt_screen.Text += "π";
@@ -335,20 +357,105 @@ namespace ejemplo_calculadora
         #region Métodos de Evaluación
         private string NormalizarExpresion(string expresion)
         {
+            // Eliminar TODOS los espacios primero
+            expresion = expresion.Replace(" ", "");
+
+            // IMPORTANTE: Reemplazar 'x' minúscula por multiplicación ANTES de procesar decimales
+            // Usar regex para reemplazar solo cuando x está entre números o después de un número
+            expresion = Regex.Replace(expresion, @"(\d)\s*x\s*(\d)", "$1*$2", RegexOptions.IgnoreCase);
+
+            // Reemplazar operadores visuales por operadores estándar
             expresion = expresion.Replace("×", "*")
                                  .Replace("÷", "/")
+                                 .Replace("X", "*")  // X mayúscula también
                                  .Replace("π", Math.PI.ToString());
+
+            // CORRECCIÓN PRINCIPAL: Normalizar decimales para evitar errores
+            // Caso 1: .5 → 0.5 (agregar 0 antes del punto decimal)
+            expresion = Regex.Replace(expresion, @"(?<![0-9])\.(?=[0-9])", "0.");
+
+            // Caso 2: 5. → 5.0 (agregar 0 después del punto decimal si va seguido de operador)
+            expresion = Regex.Replace(expresion, @"(\d)\.(?=[\+\-\*/\)\^])", "$1.0");
+
+            // Caso 3: 5. al final de la expresión → 5.0
+            expresion = Regex.Replace(expresion, @"(\d)\.$", "$1.0");
+
             return expresion;
         }
 
         private double EvaluarExpresion(string expresion)
         {
             expresion = expresion.Replace(" ", "");
+
+            // Validar la expresión antes de procesarla
+            if (!ValidarExpresion(expresion))
+            {
+                throw new Exception("Expresión inválida");
+            }
+
             expresion = ProcesarRaices(expresion);
             expresion = ProcesarExponentes(expresion);
-            DataTable dt = new DataTable();
-            var resultado = dt.Compute(expresion, "");
-            return Convert.ToDouble(resultado);
+
+            // Normalizar para DataTable.Compute
+            expresion = NormalizarParaDataTable(expresion);
+
+            try
+            {
+                DataTable dt = new DataTable();
+                var resultado = dt.Compute(expresion, "");
+                return Convert.ToDouble(resultado);
+            }
+            catch (SyntaxErrorException ex)
+            {
+                throw new Exception("Error de sintaxis: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Error al evaluar: " + ex.Message);
+            }
+        }
+
+        // NUEVO MÉTODO: Normalizar específicamente para DataTable
+        private string NormalizarParaDataTable(string expresion)
+        {
+            // Manejar multiplicación por negativos: 5*-3 → 5*(-3)
+            expresion = Regex.Replace(expresion, @"\*-(\d+\.?\d*)", "*(-$1)");
+
+            // Manejar división por negativos: 10/-2 → 10/(-2)
+            expresion = Regex.Replace(expresion, @"/-(\d+\.?\d*)", "/(-$1)");
+
+            // Manejar suma de negativos: 5+-3 → 5+(-3)
+            expresion = Regex.Replace(expresion, @"\+-(\d+\.?\d*)", "+(-$1)");
+
+            return expresion;
+        }
+
+        // NUEVO MÉTODO: Validar expresión antes de evaluar
+        private bool ValidarExpresion(string expresion)
+        {
+            // Verificar paréntesis balanceados
+            int nivel = 0;
+            foreach (char c in expresion)
+            {
+                if (c == '(') nivel++;
+                if (c == ')') nivel--;
+                if (nivel < 0) return false;
+            }
+            if (nivel != 0) return false;
+
+            // Verificar que no haya múltiples puntos decimales en un número
+            if (Regex.IsMatch(expresion, @"\d+\.\d*\.\d*"))
+                return false;
+
+            // Verificar que no termine con un operador (excepto paréntesis)
+            if (expresion.Length > 0)
+            {
+                char ultimo = expresion[expresion.Length - 1];
+                if (ultimo == '+' || ultimo == '-' || ultimo == '*' || ultimo == '/')
+                    return false;
+            }
+
+            return true;
         }
 
         private string ProcesarRaices(string expresion)
@@ -453,20 +560,53 @@ namespace ejemplo_calculadora
             return c == '+' || c == '-' || c == '*' || c == '/' || c == '×' || c == '÷';
         }
 
+        // NUEVA FUNCIÓN: Determinar si el texto termina en un número (incluyendo decimales)
+        private bool TerminaEnNumero(string texto)
+        {
+            if (string.IsNullOrEmpty(texto)) return false;
+
+            char ultimo = texto[texto.Length - 1];
+
+            // Si termina en dígito, es un número
+            if (char.IsDigit(ultimo)) return true;
+
+            // Si termina en punto decimal, verificar si hay un número antes
+            if (ultimo == '.' && texto.Length >= 2)
+            {
+                return char.IsDigit(texto[texto.Length - 2]);
+            }
+
+            return false;
+        }
+
         private string ObtenerUltimoNumero()
         {
             string texto = txt_screen.Text;
+            if (string.IsNullOrEmpty(texto)) return "";
+
             int ultimaPosicion = -1;
+
+            // Buscar el último operador básico
             for (int i = texto.Length - 1; i >= 0; i--)
             {
-                if (EsOperadorBasico(texto[i]) && i > 0)
+                char c = texto[i];
+                // Si encontramos un operador que no sea parte de un número
+                if (EsOperadorBasico(c))
                 {
+                    // Verificar que no sea un signo negativo al inicio de un número
+                    if (c == '-' && i > 0 && EsOperadorBasico(texto[i - 1]))
+                    {
+                        continue; // Es un número negativo, seguir buscando
+                    }
                     ultimaPosicion = i;
                     break;
                 }
             }
-            if (ultimaPosicion >= 0) return texto.Substring(ultimaPosicion + 1);
-            return texto;
+
+            if (ultimaPosicion >= 0)
+                return texto.Substring(ultimaPosicion + 1).Trim();
+
+            return texto.Trim();
         }
 
         private string FormatearResultado(double valor)
@@ -525,15 +665,90 @@ namespace ejemplo_calculadora
 
         private void EjecutarFuncionTrig(string funcion)
         {
-            if (modoInverso)
+            try
             {
-                // Si está activado el inverso, se sabe que es sen⁻¹, cos⁻¹, tan⁻¹
-                txt_screen.Text = $"Inv({funcion}) activada"; // placeholder
+                string ultimoNumero = ObtenerUltimoNumero();
+                if (string.IsNullOrEmpty(ultimoNumero) || !double.TryParse(ultimoNumero, out double valor))
+                {
+                    txt_screen.Text = "Error";
+                    return;
+                }
+
+                double resultado = 0;
+                double valorEnRadianes = modoRadianes ? valor : valor * Math.PI / 180;
+
+                if (modoInverso)
+                {
+                    // Funciones inversas
+                    switch (funcion)
+                    {
+                        case "sen":
+                            resultado = Math.Asin(valor);
+                            if (!modoRadianes) resultado = resultado * 180 / Math.PI;
+                            break;
+                        case "cos":
+                            resultado = Math.Acos(valor);
+                            if (!modoRadianes) resultado = resultado * 180 / Math.PI;
+                            break;
+                        case "tan":
+                            resultado = Math.Atan(valor);
+                            if (!modoRadianes) resultado = resultado * 180 / Math.PI;
+                            break;
+                    }
+                }
+                else
+                {
+                    // Funciones normales
+                    switch (funcion)
+                    {
+                        case "sen":
+                            resultado = Math.Sin(valorEnRadianes);
+                            break;
+                        case "cos":
+                            resultado = Math.Cos(valorEnRadianes);
+                            break;
+                        case "tan":
+                            resultado = Math.Tan(valorEnRadianes);
+                            break;
+                    }
+                }
+
+                // Reemplazar el último número con el resultado
+                string textoActual = txt_screen.Text;
+                int posicion = textoActual.LastIndexOf(ultimoNumero);
+                if (posicion >= 0)
+                {
+                    txt_screen.Text = textoActual.Substring(0, posicion) + FormatearResultado(resultado);
+                }
+                else
+                {
+                    txt_screen.Text = FormatearResultado(resultado);
+                }
+
+                nuevaEntrada = false;
+            }
+            catch (Exception ex)
+            {
+                txt_screen.Text = "Error";
+                MessageBox.Show($"Error en función trigonométrica: {ex.Message}", "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btn_rad_Click(object sender, EventArgs e)
+        {
+            // Alternar entre radianes y grados
+            modoRadianes = !modoRadianes;
+
+            if (modoRadianes)
+            {
+                btn_rad.Text = "RAD";
+                btn_rad.BackColor = Color.LightGreen;
             }
             else
             {
-                // Función normal: sen, cos, tan
-                txt_screen.Text = $"{funcion} activada"; // placeholder
+                btn_rad.Text = "DEG";
+                btn_rad.BackColor = Color.LightCoral;
             }
         }
 

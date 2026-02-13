@@ -58,12 +58,14 @@
             this.btn_3 = new System.Windows.Forms.Button();
             this.btn_2 = new System.Windows.Forms.Button();
             this.btn_1 = new System.Windows.Forms.Button();
+            this.btn_rad = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.btn_rad);
             this.panel1.Controls.Add(this.btn_parentesis_cierra);
             this.panel1.Controls.Add(this.btn_parentesis_abre);
             this.panel1.Controls.Add(this.btn_off);
@@ -244,9 +246,9 @@
             // btn__equal
             // 
             this.btn__equal.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.btn__equal.Location = new System.Drawing.Point(159, 452);
+            this.btn__equal.Location = new System.Drawing.Point(226, 452);
             this.btn__equal.Name = "btn__equal";
-            this.btn__equal.Size = new System.Drawing.Size(192, 61);
+            this.btn__equal.Size = new System.Drawing.Size(125, 61);
             this.btn__equal.TabIndex = 15;
             this.btn__equal.Text = "=";
             this.btn__equal.UseVisualStyleBackColor = false;
@@ -418,6 +420,17 @@
             this.btn_1.UseVisualStyleBackColor = false;
             this.btn_1.Click += new System.EventHandler(this.numero_Click);
             // 
+            // btn_rad
+            // 
+            this.btn_rad.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btn_rad.Location = new System.Drawing.Point(159, 452);
+            this.btn_rad.Name = "btn_rad";
+            this.btn_rad.Size = new System.Drawing.Size(58, 61);
+            this.btn_rad.TabIndex = 29;
+            this.btn_rad.Text = "Rad";
+            this.btn_rad.UseVisualStyleBackColor = false;
+            this.btn_rad.Click += new System.EventHandler(this.btn_rad_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -465,6 +478,7 @@
         private System.Windows.Forms.Button btn_off;
         private System.Windows.Forms.Button btn_parentesis_cierra;
         private System.Windows.Forms.Button btn_parentesis_abre;
+        private System.Windows.Forms.Button btn_rad;
     }
 }
 

@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\aribnb\\topicos_avanzado_programacion\\ejemplo_calculadora\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\aribnb\\topicos_avanzado_programacion\\ejemplo_calculadora\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,24 +18,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAABACAAAAAAAAAAAAAAwCAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAOcCAAAAAAAAAAAAALECAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-12T18:00:38.471Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
