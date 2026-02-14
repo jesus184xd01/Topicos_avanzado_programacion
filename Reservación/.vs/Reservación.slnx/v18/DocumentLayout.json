@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|solutionrelative:reservaci\u00F3n\\voucher_form.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|c:\\users\\admin\\documents\\topicos_avanzado_programacion\\reservaci\u00F3n\\reservaci\u00F3n\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\reservaci\u00F3n\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8268B889-CFD3-4255-AF8B-129A6B374A67}|Reservaci\u00F3n\\Reservaci\u00F3n.csproj|solutionrelative:reservaci\u00F3n\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -54,8 +54,7 @@
               "RelativeToolTip": "Reservaci\u00F3n\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-09T06:18:31.895Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-09T06:18:31.895Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "Reservaci\u00F3n\\Reserva_form.cs",
               "ViewState": "AgIAAFUAAAAAAAAAAAAiwGIAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T22:02:04.066Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-07T22:02:04.066Z"
             },
             {
               "$type": "Document",
@@ -80,8 +78,7 @@
               "RelativeToolTip": "Reservaci\u00F3n\\Log_in_form.cs",
               "ViewState": "AgIAAKgAAAAAAAAAAAAewGwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T22:01:45.272Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-07T22:01:45.272Z"
             },
             {
               "$type": "Document",
@@ -91,7 +88,7 @@
               "RelativeDocumentMoniker": "Reservaci\u00F3n\\Voucher_form.cs",
               "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Voucher_form.cs",
               "RelativeToolTip": "Reservaci\u00F3n\\Voucher_form.cs",
-              "ViewState": "AgIAANQAAAAAAAAAAAA6wOoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAANYAAAAAAAAAAAAAwOoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-07T22:13:18.086Z",
               "EditorCaption": ""
@@ -105,8 +102,7 @@
               "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Voucher_form.cs [Design]",
               "RelativeToolTip": "Reservaci\u00F3n\\Voucher_form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T22:13:16.346Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-02-07T22:13:16.346Z"
             },
             {
               "$type": "Document",
@@ -129,8 +125,7 @@
               "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Log_in_form.cs [Design]",
               "RelativeToolTip": "Reservaci\u00F3n\\Log_in_form.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-07T22:01:43.496Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-02-07T22:01:43.496Z"
             },
             {
               "$type": "Document",
@@ -141,8 +136,7 @@
               "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\Reservaci\u00F3n\\Reservaci\u00F3n\\Properties\\Resources.resx",
               "RelativeToolTip": "Reservaci\u00F3n\\Properties\\Resources.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2026-02-07T21:39:23.948Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-07T21:39:23.948Z"
             }
           ]
         }

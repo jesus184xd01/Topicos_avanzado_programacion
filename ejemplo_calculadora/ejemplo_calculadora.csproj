@@ -47,11 +47,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calculatorengine.cs" />
+    <Compile Include="CalculatorState.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="ExpressionHelper.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGrafica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGrafica.Designer.cs">
+      <DependentUpon>FormGrafica.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

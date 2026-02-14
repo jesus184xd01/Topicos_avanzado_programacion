@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
-using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.IO;
 
@@ -10,69 +8,46 @@ namespace ejemplo_calculadora
 {
     public partial class Form1 : Form
     {
+        #region Campos Privados
 
+        private CalculatorEngine _engine;
+        private CalculatorState _state;
+        private PrivateFontCollection _fontCollection;
 
-        #region Variables Privadas
-        private bool nuevaEntrada = true;
-        private bool modoInverso = false;
-        private bool modoRadianes = true; // true = Radianes, false = Grados
-        private const int ANCHO_VENTANA = 330;
-        private const int ALTO_VENTANA = 520;
-        private PrivateFontCollection pfc = new PrivateFontCollection();
         #endregion
 
         #region Constructor e Inicialización
+
         public Form1()
         {
             InitializeComponent();
+            _engine = new CalculatorEngine();
+            _state = new CalculatorState();
+            _fontCollection = new PrivateFontCollection();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            InicializarCalculadora();
-            CargarFuenteDigital();
+            InitializeCalculator();
         }
 
-        private void CargarFuenteDigital()
+        private void InitializeCalculator()
         {
-            try
-            {
-                // Combina la ruta relativa al ejecutable
-                string rutaFuente = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "fonts", "digital-7.ttf");
-
-
-                // Validar existencia
-                if (!File.Exists(rutaFuente))
-                {
-                    MessageBox.Show("No se encontró la fuente digital-7.ttf", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Cargar la fuente
-                pfc.AddFontFile(rutaFuente);
-
-                // Aplicar la fuente al txt_screen
-                txt_screen.Font = new Font(pfc.Families[0], 36, FontStyle.Regular);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error cargando fuente: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            ConfigureWindow();
+            ConfigurePanel();
+            ConfigureDisplay();
+            ConfigureButtonIcons();
+            LoadDigitalFont();
+            UpdateDisplay();
         }
 
-        private void InicializarCalculadora()
-        {
-            ConfigurarVentana();
-            ConfigurarPanel();
-            ConfigurarPantalla();
-            ConfigurarIconosBotones();
-        }
         #endregion
 
         #region Configuración de Interfaz
-        private void ConfigurarVentana()
+
+        private void ConfigureWindow()
         {
-            this.Size = new Size(ANCHO_VENTANA, ALTO_VENTANA);
+            this.Size = new Size(CalculatorConstants.WINDOW_WIDTH, CalculatorConstants.WINDOW_HEIGHT);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -80,13 +55,13 @@ namespace ejemplo_calculadora
             this.Text = "Calculadora Científica";
         }
 
-        private void ConfigurarPanel()
+        private void ConfigurePanel()
         {
             panel1.Left = (this.ClientRectangle.Width - panel1.Width) / 2;
             panel1.Top = 10;
         }
 
-        private void ConfigurarPantalla()
+        private void ConfigureDisplay()
         {
             txt_screen.ReadOnly = true;
             txt_screen.TextAlign = HorizontalAlignment.Right;
@@ -95,662 +70,637 @@ namespace ejemplo_calculadora
             txt_screen.Text = "0";
         }
 
-        private void ConfigurarIconosBotones()
+        private void ConfigureButtonIcons()
         {
-            btn_raiz.Text = "√";
-            btn_divid.Text = "÷";
-
-            // Configurar estado inicial del botón RAD/DEG
-            btn_rad.Text = "RAD";
-            btn_rad.BackColor = Color.LightGreen;
+            btn_raiz.Text = CalculatorConstants.Symbols.SquareRoot;
+            btn_divid.Text = CalculatorConstants.Symbols.Divide;
+            UpdateRadianModeButton();
         }
+
+        private void LoadDigitalFont()
+        {
+            try
+            {
+                string fontPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+                                              CalculatorConstants.FONT_PATH);
+
+                if (!File.Exists(fontPath))
+                {
+                    MessageBox.Show("No se encontró la fuente digital-7.ttf", "Error",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                _fontCollection.AddFontFile(fontPath);
+                txt_screen.Font = new Font(_fontCollection.Families[0],
+                                          CalculatorConstants.DISPLAY_FONT_SIZE,
+                                          FontStyle.Regular);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error cargando fuente: " + ex.Message, "Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion
+
+        #region Actualización de UI
+
+        private void UpdateDisplay()
+        {
+            txt_screen.Text = _state.CurrentExpression;
+        }
+
+        private void UpdateRadianModeButton()
+        {
+            if (_state.IsRadianMode)
+            {
+                btn_rad.Text = CalculatorConstants.ButtonLabels.Radians;
+                btn_rad.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                btn_rad.Text = CalculatorConstants.ButtonLabels.Degrees;
+                btn_rad.BackColor = Color.LightCoral;
+            }
+        }
+
+        private void UpdateInverseModeButtons()
+        {
+            if (_state.IsInverseMode)
+            {
+                btn_sen.Text = CalculatorConstants.ButtonLabels.ArcSin;
+                btn_cos.Text = CalculatorConstants.ButtonLabels.ArcCos;
+                btn_tan.Text = CalculatorConstants.ButtonLabels.ArcTan;
+                btn_shift.BackColor = Color.LightBlue;
+            }
+            else
+            {
+                btn_sen.Text = CalculatorConstants.ButtonLabels.Sin;
+                btn_cos.Text = CalculatorConstants.ButtonLabels.Cos;
+                btn_tan.Text = CalculatorConstants.ButtonLabels.Tan;
+                btn_shift.BackColor = SystemColors.Control;
+            }
+        }
+
         #endregion
 
         #region Eventos de Números
+
         private void numero_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
 
-            if (txt_screen.Text == "Error" || txt_screen.Text == "∞")
+            if (_state.IsError())
             {
-                LimpiarPantalla();
+                _state.Reset();
             }
 
-            if (nuevaEntrada || txt_screen.Text == "0")
+            if (_state.IsNewEntry || _state.CurrentExpression == "0")
             {
-                txt_screen.Text = btn.Text;
-                nuevaEntrada = false;
+                _state.UpdateExpression(btn.Text);
+                _state.IsNewEntry = false;
             }
             else
             {
-                // Evitar múltiples puntos decimales en el mismo número
-                if (btn.Text == "." && ObtenerUltimoNumero().Contains(".")) return;
-                txt_screen.Text += btn.Text;
+                if (btn.Text == "." && !ExpressionHelper.CanAddDecimalPoint(_state.CurrentExpression))
+                {
+                    return;
+                }
+                _state.AppendToExpression(btn.Text);
             }
+
+            UpdateDisplay();
         }
 
         private void btn_point_Click(object sender, EventArgs e)
         {
             numero_Click(sender, e);
         }
+
         #endregion
 
         #region Eventos de Operaciones Básicas
+
         private void operacion_Click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
-            string operador = btn.Text;
-            string textoActual = txt_screen.Text;
+            string operatorSymbol = btn.Text;
+            string currentText = _state.CurrentExpression;
 
-            if (string.IsNullOrEmpty(textoActual) || textoActual == "Error" || textoActual == "∞")
+            if (string.IsNullOrEmpty(currentText) || _state.IsError())
             {
-                if (operador == "-")
+                if (operatorSymbol == "-")
                 {
-                    txt_screen.Text = "-";
-                    nuevaEntrada = false;
+                    _state.UpdateExpression("-");
+                    _state.IsNewEntry = false;
                 }
+                UpdateDisplay();
                 return;
             }
 
-            // Permitir número negativo al inicio
-            if (textoActual == "0" && operador == "-")
+            if (currentText == "0" && operatorSymbol == "-")
             {
-                txt_screen.Text = "-";
-                nuevaEntrada = false;
+                _state.UpdateExpression("-");
+                _state.IsNewEntry = false;
+                UpdateDisplay();
                 return;
             }
 
-            // Si el último carácter es un operador
-            if (textoActual.Length > 0 && EsOperadorBasico(textoActual[textoActual.Length - 1]))
+            if (currentText.Length > 0 && ExpressionHelper.IsBasicOperator(currentText[currentText.Length - 1]))
             {
-                if (operador == "-" && textoActual[textoActual.Length - 1] != '-')
-                    txt_screen.Text += operador;
+                if (operatorSymbol == "-" && currentText[currentText.Length - 1] != '-')
+                    _state.AppendToExpression(operatorSymbol);
                 else
-                    txt_screen.Text = textoActual.Substring(0, textoActual.Length - 1) + operador;
+                    _state.UpdateExpression(currentText.Substring(0, currentText.Length - 1) + operatorSymbol);
             }
             else
             {
-                txt_screen.Text += operador;
+                _state.AppendToExpression(operatorSymbol);
             }
 
-            nuevaEntrada = false;
+            _state.IsNewEntry = false;
+            UpdateDisplay();
         }
 
         private void btn__equal_Click(object sender, EventArgs e)
         {
             try
             {
-                string expresion = txt_screen.Text;
-                if (string.IsNullOrEmpty(expresion) || expresion == "0") return;
+                string expression = _state.CurrentExpression;
+                if (string.IsNullOrEmpty(expression) || expression == "0") return;
 
-                // DEBUG: Mostrar expresión original
-                System.Diagnostics.Debug.WriteLine($"1. Expresión original: {expresion}");
+                // Detectar si hay funciones trigonométricas para ofrecer ver gráfica
+                string lastNumber = ExpressionHelper.GetLastNumber(expression);
 
-                expresion = NormalizarExpresion(expresion);
+                // Si es solo un número después de usar función trigonométrica
+                // Mostrar menú de opciones
+                if (!string.IsNullOrEmpty(lastNumber) && double.TryParse(lastNumber, out _))
+                {
+                    // Verificar si la expresión es simple (un número)
+                    if (lastNumber == expression.Trim())
+                    {
+                        // Mostrar menú de opciones para graficar
+                        ShowGraphMenu();
+                        return;
+                    }
+                }
 
-                // DEBUG: Mostrar expresión normalizada
-                System.Diagnostics.Debug.WriteLine($"2. Expresión normalizada: {expresion}");
-
-                double resultado = EvaluarExpresion(expresion);
-
-                // DEBUG: Mostrar resultado
-                System.Diagnostics.Debug.WriteLine($"3. Resultado: {resultado}");
-
-                if (double.IsNaN(resultado))
-                    txt_screen.Text = "Error";
-                else if (double.IsInfinity(resultado))
-                    txt_screen.Text = "∞";
-                else
-                    txt_screen.Text = FormatearResultado(resultado);
-
-                nuevaEntrada = true;
+                // Cálculo normal
+                CalculateExpression();
             }
             catch (Exception ex)
             {
-                txt_screen.Text = "Error";
-                nuevaEntrada = true;
+                _state.UpdateExpression(CalculatorConstants.ErrorMessages.GenericError);
+                _state.IsNewEntry = true;
+                UpdateDisplay();
 
-                // DEBUG: Mostrar error completo
-                System.Diagnostics.Debug.WriteLine($"ERROR COMPLETO: {ex.ToString()}");
-
-                MessageBox.Show($"Error al calcular: {ex.Message}\n\nExpresión: {txt_screen.Text}", "Error de Cálculo",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error al calcular: {ex.Message}\n\nExpresión: {_state.CurrentExpression}",
+                              "Error de Cálculo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        #endregion
+
+        #region Cálculo y Evaluación
+
+        /// <summary>
+        /// Realiza el cálculo de la expresión actual
+        /// </summary>
+        private void CalculateExpression()
+        {
+            try
+            {
+                string expression = _state.CurrentExpression;
+                expression = _engine.NormalizeExpression(expression);
+                double result = _engine.Evaluate(expression);
+
+                if (double.IsNaN(result))
+                {
+                    _state.UpdateExpression(CalculatorConstants.ErrorMessages.GenericError);
+                }
+                else if (double.IsInfinity(result))
+                {
+                    _state.UpdateExpression(CalculatorConstants.ErrorMessages.Infinity);
+                }
+                else
+                {
+                    _state.UpdateExpression(_engine.FormatResult(result));
+                }
+
+                _state.IsNewEntry = true;
+                UpdateDisplay();
+            }
+            catch (Exception ex)
+            {
+                _state.UpdateExpression(CalculatorConstants.ErrorMessages.GenericError);
+                _state.IsNewEntry = true;
+                UpdateDisplay();
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Muestra menú para seleccionar qué función graficar
+        /// </summary>
+        private void ShowGraphMenu()
+        {
+            // Crear el diálogo
+            Form menuForm = new Form
+            {
+                Text = "Selecciona una función",
+                Size = new Size(320, 240),
+                StartPosition = FormStartPosition.CenterParent,
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                MaximizeBox = false,
+                MinimizeBox = false,
+                BackColor = Color.White
+            };
+
+            // Etiqueta de título
+            Label lblTitle = new Label
+            {
+                Text = "¿Qué función deseas graficar?",
+                Location = new Point(20, 15),
+                Size = new Size(280, 25),
+                Font = new Font("Segoe UI", 11, FontStyle.Bold),
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            // Botón SEN
+            Button btnSen = new Button
+            {
+                Text = _state.IsInverseMode ? "📈 Arcsen(x)" : "📈 Sen(x)",
+                Location = new Point(30, 55),
+                Size = new Size(120, 40),
+                Font = new Font("Segoe UI", 10),
+                BackColor = Color.FromArgb(100, 180, 255),
+                FlatStyle = FlatStyle.Flat,
+                ForeColor = Color.White,
+                Cursor = Cursors.Hand
+            };
+            btnSen.FlatAppearance.BorderSize = 0;
+            btnSen.Click += (s, ev) =>
+            {
+                menuForm.Close();
+                MostrarGrafica("sen");
+            };
+
+            // Botón COS
+            Button btnCos = new Button
+            {
+                Text = _state.IsInverseMode ? "📈 Arccos(x)" : "📈 Cos(x)",
+                Location = new Point(170, 55),
+                Size = new Size(120, 40),
+                Font = new Font("Segoe UI", 10),
+                BackColor = Color.FromArgb(255, 150, 100),
+                FlatStyle = FlatStyle.Flat,
+                ForeColor = Color.White,
+                Cursor = Cursors.Hand
+            };
+            btnCos.FlatAppearance.BorderSize = 0;
+            btnCos.Click += (s, ev) =>
+            {
+                menuForm.Close();
+                MostrarGrafica("cos");
+            };
+
+            // Botón TAN
+            Button btnTan = new Button
+            {
+                Text = _state.IsInverseMode ? "📈 Arctan(x)" : "📈 Tan(x)",
+                Location = new Point(30, 110),
+                Size = new Size(120, 40),
+                Font = new Font("Segoe UI", 10),
+                BackColor = Color.FromArgb(100, 200, 100),
+                FlatStyle = FlatStyle.Flat,
+                ForeColor = Color.White,
+                Cursor = Cursors.Hand
+            };
+            btnTan.FlatAppearance.BorderSize = 0;
+            btnTan.Click += (s, ev) =>
+            {
+                menuForm.Close();
+                MostrarGrafica("tan");
+            };
+
+            // Botón Cancelar
+            Button btnCancel = new Button
+            {
+                Text = "❌ Cancelar",
+                Location = new Point(170, 110),
+                Size = new Size(120, 40),
+                Font = new Font("Segoe UI", 10),
+                BackColor = Color.FromArgb(220, 220, 220),
+                FlatStyle = FlatStyle.Flat,
+                ForeColor = Color.Black,
+                Cursor = Cursors.Hand
+            };
+            btnCancel.FlatAppearance.BorderSize = 0;
+            btnCancel.Click += (s, ev) =>
+            {
+                menuForm.Close();
+            };
+
+            // Información adicional
+            Label lblInfo = new Label
+            {
+                Text = $"Modo: {(_state.IsRadianMode ? "Radianes" : "Grados")}",
+                Location = new Point(20, 165),
+                Size = new Size(280, 20),
+                Font = new Font("Segoe UI", 9, FontStyle.Italic),
+                ForeColor = Color.Gray,
+                TextAlign = ContentAlignment.MiddleCenter
+            };
+
+            // Agregar controles
+            menuForm.Controls.Add(lblTitle);
+            menuForm.Controls.Add(btnSen);
+            menuForm.Controls.Add(btnCos);
+            menuForm.Controls.Add(btnTan);
+            menuForm.Controls.Add(btnCancel);
+            menuForm.Controls.Add(lblInfo);
+
+            // Mostrar el diálogo
+            menuForm.ShowDialog();
+        }
+
         #endregion
 
         #region Funciones Especiales
+
         private void btn_shift_Click(object sender, EventArgs e)
         {
-            modoInverso = !modoInverso;
-            if (modoInverso)
-            {
-                btn_sen.Text = "sin⁻¹";
-                btn_cos.Text = "cos⁻¹";
-                btn_tan.Text = "tan⁻¹";
-                btn_shift.BackColor = Color.LightBlue;
-            }
-            else
-            {
-                btn_sen.Text = "SEN";
-                btn_cos.Text = "COS";
-                btn_tan.Text = "TAN";
-                btn_shift.BackColor = SystemColors.Control;
-            }
+            _state.ToggleInverseMode();
+            UpdateInverseModeButtons();
         }
 
         private void btn_ac_Click(object sender, EventArgs e)
         {
-            LimpiarPantalla();
+            _state.Reset();
+            UpdateDisplay();
         }
 
         private void btn_parentesis_abre_Click(object sender, EventArgs e)
         {
-            string textoActual = txt_screen.Text;
-            if (textoActual == "0" || textoActual == "Error" || textoActual == "∞")
-                txt_screen.Text = "(";
+            string currentText = _state.CurrentExpression;
+
+            if (currentText == "0" || _state.IsError())
+            {
+                _state.UpdateExpression("(");
+            }
             else
             {
-                char ultimo = textoActual[textoActual.Length - 1];
-                // CORRECCIÓN: Usar TerminaEnNumero en lugar de char.IsDigit
-                if (TerminaEnNumero(textoActual) || ultimo == ')' || ultimo == 'π')
-                    txt_screen.Text += "×(";
+                char lastChar = currentText[currentText.Length - 1];
+                if (ExpressionHelper.EndsWithNumber(currentText) || lastChar == ')' || lastChar == 'π')
+                    _state.AppendToExpression(CalculatorConstants.Symbols.Multiply + "(");
                 else
-                    txt_screen.Text += "(";
+                    _state.AppendToExpression("(");
             }
-            nuevaEntrada = false;
+
+            _state.IsNewEntry = false;
+            UpdateDisplay();
         }
 
         private void btn_parentesis_cierra_Click(object sender, EventArgs e)
         {
-            string textoActual = txt_screen.Text;
-            int abiertos = 0, cerrados = 0;
-            foreach (char c in textoActual)
+            string currentText = _state.CurrentExpression;
+            ExpressionHelper.CountParentheses(currentText, out int open, out int close);
+
+            if (open > close)
             {
-                if (c == '(') abiertos++;
-                if (c == ')') cerrados++;
+                _state.AppendToExpression(")");
             }
-            if (abiertos > cerrados) txt_screen.Text += ")";
-            nuevaEntrada = false;
+
+            _state.IsNewEntry = false;
+            UpdateDisplay();
         }
 
         private void btn_raiz_Click_1(object sender, EventArgs e)
         {
-            string textoActual = txt_screen.Text;
-            if (textoActual == "0" || textoActual == "Error" || textoActual == "∞")
-                txt_screen.Text = "√(";
+            string currentText = _state.CurrentExpression;
+
+            if (currentText == "0" || _state.IsError())
+            {
+                _state.UpdateExpression(CalculatorConstants.Symbols.SquareRoot + "(");
+            }
             else
             {
-                char ultimo = textoActual[textoActual.Length - 1];
-                // CORRECCIÓN: Usar TerminaEnNumero en lugar de char.IsDigit
-                if (TerminaEnNumero(textoActual) || ultimo == ')' || ultimo == 'π')
-                    txt_screen.Text += "×√(";
+                if (ExpressionHelper.ShouldAddMultiplicationBeforeFunction(currentText))
+                    _state.AppendToExpression(CalculatorConstants.Symbols.Multiply +
+                                            CalculatorConstants.Symbols.SquareRoot + "(");
                 else
-                    txt_screen.Text += "√(";
+                    _state.AppendToExpression(CalculatorConstants.Symbols.SquareRoot + "(");
             }
-            nuevaEntrada = false;
+
+            _state.IsNewEntry = false;
+            UpdateDisplay();
         }
 
         private void btn_exp_Click(object sender, EventArgs e)
         {
-            string textoActual = txt_screen.Text;
-            if (textoActual == "0" || textoActual == "Error" || textoActual == "∞")
-                txt_screen.Text = "1^(";
+            string currentText = _state.CurrentExpression;
+
+            if (currentText == "0" || _state.IsError())
+                _state.UpdateExpression("1^(");
             else
-                txt_screen.Text += "^(";
-            nuevaEntrada = false;
+                _state.AppendToExpression("^(");
+
+            _state.IsNewEntry = false;
+            UpdateDisplay();
         }
 
         private void btn_pi_Click(object sender, EventArgs e)
         {
-            string textoActual = txt_screen.Text;
-            if (textoActual == "0" || textoActual == "Error" || textoActual == "∞")
-                txt_screen.Text = "π";
+            string currentText = _state.CurrentExpression;
+
+            if (currentText == "0" || _state.IsError())
+            {
+                _state.UpdateExpression(CalculatorConstants.Symbols.Pi);
+            }
             else
             {
-                char ultimo = textoActual[textoActual.Length - 1];
-                // CORRECCIÓN: Usar TerminaEnNumero en lugar de char.IsDigit
-                if (TerminaEnNumero(textoActual) || ultimo == ')' || ultimo == 'π')
-                    txt_screen.Text += "×π";
+                char lastChar = currentText[currentText.Length - 1];
+                if (ExpressionHelper.EndsWithNumber(currentText) || lastChar == ')' || lastChar == 'π')
+                    _state.AppendToExpression(CalculatorConstants.Symbols.Multiply +
+                                            CalculatorConstants.Symbols.Pi);
                 else
-                    txt_screen.Text += "π";
+                    _state.AppendToExpression(CalculatorConstants.Symbols.Pi);
             }
-            nuevaEntrada = false;
+
+            _state.IsNewEntry = false;
+            UpdateDisplay();
         }
 
         private void btn_del_Click(object sender, EventArgs e)
         {
-            string textoActual = txt_screen.Text;
-            if (string.IsNullOrEmpty(textoActual) || textoActual == "0") return;
+            if (_state.CurrentExpression == "0" || string.IsNullOrEmpty(_state.CurrentExpression))
+                return;
 
-            int longitud = textoActual.Length;
-            char ultimo = textoActual[longitud - 1];
-
-            // Manejar π
-            if (ultimo == 'π')
-            {
-                txt_screen.Text = textoActual.Substring(0, longitud - 1);
-            }
-            // Manejar exponentes con paréntesis "^("
-            else if (ultimo == '(' && longitud >= 2 && textoActual[longitud - 2] == '^')
-            {
-                txt_screen.Text = textoActual.Substring(0, longitud - 2);
-            }
-            // Manejar raíces "√("
-            else if (ultimo == '(' && longitud >= 2 && textoActual[longitud - 2] == '√')
-            {
-                txt_screen.Text = textoActual.Substring(0, longitud - 2);
-            }
-            else
-            {
-                txt_screen.Text = textoActual.Substring(0, longitud - 1);
-            }
-
-            if (string.IsNullOrEmpty(txt_screen.Text))
-            {
-                txt_screen.Text = "0";
-                nuevaEntrada = true;
-            }
-        }
-        #endregion
-
-        #region Métodos de Evaluación
-        private string NormalizarExpresion(string expresion)
-        {
-            // Eliminar TODOS los espacios primero
-            expresion = expresion.Replace(" ", "");
-
-            // IMPORTANTE: Reemplazar 'x' minúscula por multiplicación ANTES de procesar decimales
-            // Usar regex para reemplazar solo cuando x está entre números o después de un número
-            expresion = Regex.Replace(expresion, @"(\d)\s*x\s*(\d)", "$1*$2", RegexOptions.IgnoreCase);
-
-            // Reemplazar operadores visuales por operadores estándar
-            expresion = expresion.Replace("×", "*")
-                                 .Replace("÷", "/")
-                                 .Replace("X", "*")  // X mayúscula también
-                                 .Replace("π", Math.PI.ToString());
-
-            // CORRECCIÓN PRINCIPAL: Normalizar decimales para evitar errores
-            // Caso 1: .5 → 0.5 (agregar 0 antes del punto decimal)
-            expresion = Regex.Replace(expresion, @"(?<![0-9])\.(?=[0-9])", "0.");
-
-            // Caso 2: 5. → 5.0 (agregar 0 después del punto decimal si va seguido de operador)
-            expresion = Regex.Replace(expresion, @"(\d)\.(?=[\+\-\*/\)\^])", "$1.0");
-
-            // Caso 3: 5. al final de la expresión → 5.0
-            expresion = Regex.Replace(expresion, @"(\d)\.$", "$1.0");
-
-            return expresion;
-        }
-
-        private double EvaluarExpresion(string expresion)
-        {
-            expresion = expresion.Replace(" ", "");
-
-            // Validar la expresión antes de procesarla
-            if (!ValidarExpresion(expresion))
-            {
-                throw new Exception("Expresión inválida");
-            }
-
-            expresion = ProcesarRaices(expresion);
-            expresion = ProcesarExponentes(expresion);
-
-            // Normalizar para DataTable.Compute
-            expresion = NormalizarParaDataTable(expresion);
-
-            try
-            {
-                DataTable dt = new DataTable();
-                var resultado = dt.Compute(expresion, "");
-                return Convert.ToDouble(resultado);
-            }
-            catch (SyntaxErrorException ex)
-            {
-                throw new Exception("Error de sintaxis: " + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error al evaluar: " + ex.Message);
-            }
-        }
-
-        // NUEVO MÉTODO: Normalizar específicamente para DataTable
-        private string NormalizarParaDataTable(string expresion)
-        {
-            // Manejar multiplicación por negativos: 5*-3 → 5*(-3)
-            expresion = Regex.Replace(expresion, @"\*-(\d+\.?\d*)", "*(-$1)");
-
-            // Manejar división por negativos: 10/-2 → 10/(-2)
-            expresion = Regex.Replace(expresion, @"/-(\d+\.?\d*)", "/(-$1)");
-
-            // Manejar suma de negativos: 5+-3 → 5+(-3)
-            expresion = Regex.Replace(expresion, @"\+-(\d+\.?\d*)", "+(-$1)");
-
-            return expresion;
-        }
-
-        // NUEVO MÉTODO: Validar expresión antes de evaluar
-        private bool ValidarExpresion(string expresion)
-        {
-            // Verificar paréntesis balanceados
-            int nivel = 0;
-            foreach (char c in expresion)
-            {
-                if (c == '(') nivel++;
-                if (c == ')') nivel--;
-                if (nivel < 0) return false;
-            }
-            if (nivel != 0) return false;
-
-            // Verificar que no haya múltiples puntos decimales en un número
-            if (Regex.IsMatch(expresion, @"\d+\.\d*\.\d*"))
-                return false;
-
-            // Verificar que no termine con un operador (excepto paréntesis)
-            if (expresion.Length > 0)
-            {
-                char ultimo = expresion[expresion.Length - 1];
-                if (ultimo == '+' || ultimo == '-' || ultimo == '*' || ultimo == '/')
-                    return false;
-            }
-
-            return true;
-        }
-
-        private string ProcesarRaices(string expresion)
-        {
-            while (expresion.Contains("√"))
-            {
-                int idx = expresion.IndexOf("√");
-                if (idx + 1 >= expresion.Length || expresion[idx + 1] != '(')
-                    throw new Exception("Formato de raíz inválido. Use √(número)");
-
-                int cierre = EncontrarCierreParentesis(expresion, idx + 2);
-                string contenido = expresion.Substring(idx + 2, cierre - (idx + 2));
-                double valor = EvaluarExpresion(contenido);
-                double resultado = Math.Sqrt(valor);
-
-                expresion = expresion.Substring(0, idx) + resultado.ToString() +
-                            expresion.Substring(cierre + 1);
-            }
-            return expresion;
-        }
-
-        private string ProcesarExponentes(string expresion)
-        {
-            while (expresion.Contains("^"))
-            {
-                int idx = expresion.IndexOf("^");
-                int baseStart = ObtenerInicioBase(expresion, idx);
-                string baseStr = expresion.Substring(baseStart, idx - baseStart);
-
-                string exponente;
-                int expFin;
-                if (idx + 1 < expresion.Length && expresion[idx + 1] == '(')
-                {
-                    int cierre = EncontrarCierreParentesis(expresion, idx + 2);
-                    exponente = expresion.Substring(idx + 2, cierre - (idx + 2));
-                    expFin = cierre + 1;
-                }
-                else
-                {
-                    int expStart = idx + 1;
-                    expFin = expStart;
-                    while (expFin < expresion.Length && (char.IsDigit(expresion[expFin]) || expresion[expFin] == '.')) expFin++;
-                    exponente = expresion.Substring(expStart, expFin - expStart);
-                }
-
-                double baseVal = EvaluarExpresion(baseStr);
-                double expVal = EvaluarExpresion(exponente);
-                double resultado = Math.Pow(baseVal, expVal);
-
-                expresion = expresion.Substring(0, baseStart) + resultado.ToString() + expresion.Substring(expFin);
-            }
-            return expresion;
-        }
-
-        private int ObtenerInicioBase(string expresion, int posicionExp)
-        {
-            int inicio = posicionExp - 1;
-            if (inicio >= 0 && expresion[inicio] == ')')
-            {
-                int nivel = 1;
-                inicio--;
-                while (inicio >= 0 && nivel > 0)
-                {
-                    if (expresion[inicio] == ')') nivel++;
-                    else if (expresion[inicio] == '(') nivel--;
-                    inicio--;
-                }
-                inicio++;
-            }
-            else
-            {
-                while (inicio >= 0 && (char.IsDigit(expresion[inicio]) || expresion[inicio] == '.')) inicio--;
-                inicio++;
-            }
-            return inicio;
-        }
-
-        private int EncontrarCierreParentesis(string expresion, int inicio)
-        {
-            int nivel = 1;
-            int i = inicio;
-            while (i < expresion.Length && nivel > 0)
-            {
-                if (expresion[i] == '(') nivel++;
-                else if (expresion[i] == ')') nivel--;
-                i++;
-            }
-            if (nivel != 0) throw new Exception("Paréntesis desbalanceados");
-            return i - 1;
-        }
-        #endregion
-
-        #region Métodos Auxiliares
-        private void LimpiarPantalla()
-        {
-            txt_screen.Text = "0";
-            nuevaEntrada = true;
-        }
-
-        private bool EsOperadorBasico(char c)
-        {
-            return c == '+' || c == '-' || c == '*' || c == '/' || c == '×' || c == '÷';
-        }
-
-        // NUEVA FUNCIÓN: Determinar si el texto termina en un número (incluyendo decimales)
-        private bool TerminaEnNumero(string texto)
-        {
-            if (string.IsNullOrEmpty(texto)) return false;
-
-            char ultimo = texto[texto.Length - 1];
-
-            // Si termina en dígito, es un número
-            if (char.IsDigit(ultimo)) return true;
-
-            // Si termina en punto decimal, verificar si hay un número antes
-            if (ultimo == '.' && texto.Length >= 2)
-            {
-                return char.IsDigit(texto[texto.Length - 2]);
-            }
-
-            return false;
-        }
-
-        private string ObtenerUltimoNumero()
-        {
-            string texto = txt_screen.Text;
-            if (string.IsNullOrEmpty(texto)) return "";
-
-            int ultimaPosicion = -1;
-
-            // Buscar el último operador básico
-            for (int i = texto.Length - 1; i >= 0; i--)
-            {
-                char c = texto[i];
-                // Si encontramos un operador que no sea parte de un número
-                if (EsOperadorBasico(c))
-                {
-                    // Verificar que no sea un signo negativo al inicio de un número
-                    if (c == '-' && i > 0 && EsOperadorBasico(texto[i - 1]))
-                    {
-                        continue; // Es un número negativo, seguir buscando
-                    }
-                    ultimaPosicion = i;
-                    break;
-                }
-            }
-
-            if (ultimaPosicion >= 0)
-                return texto.Substring(ultimaPosicion + 1).Trim();
-
-            return texto.Trim();
-        }
-
-        private string FormatearResultado(double valor)
-        {
-            if (Math.Abs(valor - Math.Floor(valor)) < 1e-10 && Math.Abs(valor) < 1e10)
-                return ((long)valor).ToString();
-            if (Math.Abs(valor) < 1e-6 || Math.Abs(valor) > 1e10)
-                return valor.ToString("E6");
-            return valor.ToString("G10");
-        }
-        #endregion
-
-        #region Eventos de Panel
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-        }
-        #endregion
-
-        private void btn_off_Click(object sender, EventArgs e)
-        {
-            // Mostrar mensaje en la pantalla
-            txt_screen.Text = "¡Hasta luego!";
-
-            // Deshabilitar temporalmente los botones para que no se pueda seguir escribiendo
-            foreach (Control ctl in panel1.Controls)
-            {
-                if (ctl is Button)
-                    ctl.Enabled = false;
-            }
-
-            // Usar un temporizador para cerrar la calculadora después de 1 segundo
-            Timer timer = new Timer();
-            timer.Interval = 1000; // 1000 ms = 1 segundo
-            timer.Tick += (s, ev) =>
-            {
-                timer.Stop();
-                this.Close(); // Cierra la calculadora
-            };
-            timer.Start();
-        }
-
-        private void btn_sen_Click(object sender, EventArgs e)
-        {
-            EjecutarFuncionTrig("sen"); // aquí le decimos que se presionó seno
-        }
-
-        private void btn_cos_Click(object sender, EventArgs e)
-        {
-            EjecutarFuncionTrig("cos"); // aquí le decimos que se presionó coseno
-        }
-
-        private void btn_tan_Click(object sender, EventArgs e)
-        {
-            EjecutarFuncionTrig("tan"); // aquí le decimos que se presionó tangente
-        }
-
-        private void EjecutarFuncionTrig(string funcion)
-        {
-            try
-            {
-                string ultimoNumero = ObtenerUltimoNumero();
-                if (string.IsNullOrEmpty(ultimoNumero) || !double.TryParse(ultimoNumero, out double valor))
-                {
-                    txt_screen.Text = "Error";
-                    return;
-                }
-
-                double resultado = 0;
-                double valorEnRadianes = modoRadianes ? valor : valor * Math.PI / 180;
-
-                if (modoInverso)
-                {
-                    // Funciones inversas
-                    switch (funcion)
-                    {
-                        case "sen":
-                            resultado = Math.Asin(valor);
-                            if (!modoRadianes) resultado = resultado * 180 / Math.PI;
-                            break;
-                        case "cos":
-                            resultado = Math.Acos(valor);
-                            if (!modoRadianes) resultado = resultado * 180 / Math.PI;
-                            break;
-                        case "tan":
-                            resultado = Math.Atan(valor);
-                            if (!modoRadianes) resultado = resultado * 180 / Math.PI;
-                            break;
-                    }
-                }
-                else
-                {
-                    // Funciones normales
-                    switch (funcion)
-                    {
-                        case "sen":
-                            resultado = Math.Sin(valorEnRadianes);
-                            break;
-                        case "cos":
-                            resultado = Math.Cos(valorEnRadianes);
-                            break;
-                        case "tan":
-                            resultado = Math.Tan(valorEnRadianes);
-                            break;
-                    }
-                }
-
-                // Reemplazar el último número con el resultado
-                string textoActual = txt_screen.Text;
-                int posicion = textoActual.LastIndexOf(ultimoNumero);
-                if (posicion >= 0)
-                {
-                    txt_screen.Text = textoActual.Substring(0, posicion) + FormatearResultado(resultado);
-                }
-                else
-                {
-                    txt_screen.Text = FormatearResultado(resultado);
-                }
-
-                nuevaEntrada = false;
-            }
-            catch (Exception ex)
-            {
-                txt_screen.Text = "Error";
-                MessageBox.Show($"Error en función trigonométrica: {ex.Message}", "Error",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            _state.DeleteLastCharacter();
+            UpdateDisplay();
         }
 
         private void btn_rad_Click(object sender, EventArgs e)
         {
-            // Alternar entre radianes y grados
-            modoRadianes = !modoRadianes;
+            _state.ToggleRadianMode();
+            UpdateRadianModeButton();
+        }
 
-            if (modoRadianes)
+        #endregion
+
+        #region Funciones Trigonométricas
+
+        private void btn_sen_Click(object sender, EventArgs e)
+        {
+            ExecuteTrigonometricFunction("sen");
+        }
+
+        private void btn_cos_Click(object sender, EventArgs e)
+        {
+            ExecuteTrigonometricFunction("cos");
+        }
+
+        private void btn_tan_Click(object sender, EventArgs e)
+        {
+            ExecuteTrigonometricFunction("tan");
+        }
+
+        private void ExecuteTrigonometricFunction(string function)
+        {
+            try
             {
-                btn_rad.Text = "RAD";
-                btn_rad.BackColor = Color.LightGreen;
+                string lastNumber = ExpressionHelper.GetLastNumber(_state.CurrentExpression);
+
+                if (string.IsNullOrEmpty(lastNumber) || !double.TryParse(lastNumber, out double value))
+                {
+                    _state.UpdateExpression(CalculatorConstants.ErrorMessages.GenericError);
+                    UpdateDisplay();
+                    return;
+                }
+
+                double result = _engine.CalculateTrigonometric(function, value,
+                                                              _state.IsRadianMode,
+                                                              _state.IsInverseMode);
+
+                string currentText = _state.CurrentExpression;
+                int position = currentText.LastIndexOf(lastNumber);
+
+                if (position >= 0)
+                {
+                    _state.UpdateExpression(currentText.Substring(0, position) +
+                                          _engine.FormatResult(result));
+                }
+                else
+                {
+                    _state.UpdateExpression(_engine.FormatResult(result));
+                }
+
+                _state.IsNewEntry = false;
+                UpdateDisplay();
             }
-            else
+            catch (Exception ex)
             {
-                btn_rad.Text = "DEG";
-                btn_rad.BackColor = Color.LightCoral;
+                _state.UpdateExpression(CalculatorConstants.ErrorMessages.GenericError);
+                UpdateDisplay();
+                MessageBox.Show($"Error en función trigonométrica: {ex.Message}", "Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        #endregion
+
+        #region Eventos de Gráficas
+
+        /// <summary>
+        /// Muestra la gráfica de la función trigonométrica especificada
+        /// </summary>
+        private void MostrarGrafica(string functionName)
+        {
+            try
+            {
+                UI.FormGrafica formGrafica = new UI.FormGrafica(functionName, _state.IsInverseMode);
+                formGrafica.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al mostrar gráfica: {ex.Message}", "Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        /// <summary>
+        /// Evento para mostrar gráfica de seno (clic derecho)
+        /// </summary>
+        private void btn_sen_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                MostrarGrafica("sen");
+            }
+        }
+
+        /// <summary>
+        /// Evento para mostrar gráfica de coseno (clic derecho)
+        /// </summary>
+        private void btn_cos_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                MostrarGrafica("cos");
+            }
+        }
+
+        /// <summary>
+        /// Evento para mostrar gráfica de tangente (clic derecho)
+        /// </summary>
+        private void btn_tan_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                MostrarGrafica("tan");
+            }
+        }
+
+        /// <summary>
+        /// Evento para mostrar menú de gráficas con mantener presionado el botón igual
+        /// </summary>
+        private void btn__equal_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                ShowGraphMenu();
+            }
+        }
+
+        #endregion
+
+        #region Otros Eventos
+
+        private void btn_off_Click(object sender, EventArgs e)
+        {
+            txt_screen.Text = "¡Hasta luego!";
+
+            foreach (Control control in panel1.Controls)
+            {
+                if (control is Button)
+                    control.Enabled = false;
+            }
+
+            Timer timer = new Timer { Interval = 1000 };
+            timer.Tick += (s, ev) =>
+            {
+                timer.Stop();
+                this.Close();
+            };
+            timer.Start();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        #endregion
     }
 }
