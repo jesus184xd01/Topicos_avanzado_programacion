@@ -616,11 +616,51 @@ namespace ejemplo_calculadora
         /// <summary>
         /// Muestra la gráfica de la función trigonométrica especificada
         /// </summary>
+        /// <summary>
+        /// Muestra la gráfica de la función trigonométrica CON el punto calculado del usuario
+        /// </summary>
         private void MostrarGrafica(string functionName)
         {
             try
             {
-                UI.FormGrafica formGrafica = new UI.FormGrafica(functionName, _state.IsInverseMode);
+                // Obtener el valor que el usuario ingresó
+                string lastNumber = ExpressionHelper.GetLastNumber(_state.CurrentExpression);
+
+                double? userX = null;
+                double? userY = null;
+
+                // Si hay un número válido en la expresión
+                if (!string.IsNullOrEmpty(lastNumber) && double.TryParse(lastNumber, out double inputValue))
+                {
+                    userX = inputValue;
+
+                    // Calcular el resultado de la función para ese valor
+                    try
+                    {
+                        userY = _engine.CalculateTrigonometric(
+                            functionName,
+                            inputValue,
+                            _state.IsRadianMode,
+                            _state.IsInverseMode
+                        );
+                    }
+                    catch
+                    {
+                        // Si falla el cálculo, solo mostrar la gráfica sin el punto
+                        userX = null;
+                        userY = null;
+                    }
+                }
+
+                // Crear la gráfica con el punto del usuario
+                UI.FormGrafica formGrafica = new UI.FormGrafica(
+                    functionName,
+                    _state.IsInverseMode,
+                    userX,      // Valor X del usuario
+                    userY,      // Valor Y calculado
+                    _state.IsRadianMode
+                );
+
                 formGrafica.Show();
             }
             catch (Exception ex)
