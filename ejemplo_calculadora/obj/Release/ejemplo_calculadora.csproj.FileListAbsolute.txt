@@ -1,0 +1,10 @@
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\bin\Release\ejemplo_calculadora.exe.config
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\bin\Release\ejemplo_calculadora.exe
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\bin\Release\ejemplo_calculadora.pdb
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Release\ejemplo_calculadora.csproj.AssemblyReference.cache
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Release\ejemplo_calculadora.Form1.resources
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Release\ejemplo_calculadora.Properties.Resources.resources
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Release\ejemplo_calculadora.csproj.GenerateResource.cache
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Release\ejemplo_calculadora.csproj.CoreCompileInputs.cache
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Release\ejemplo_calculadora.exe
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Release\ejemplo_calculadora.pdb

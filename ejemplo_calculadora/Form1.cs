@@ -86,8 +86,7 @@ namespace ejemplo_calculadora
 
                 if (!File.Exists(fontPath))
                 {
-                    MessageBox.Show("No se encontró la fuente digital-7.ttf", "Error",
-                                  MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //si no se encuentra la ruta solo retorna y no muestra error 
                     return;
                 }
 
