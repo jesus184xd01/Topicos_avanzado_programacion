@@ -28,3 +28,14 @@ C:\Users\admin\Documents\Topicos_avanzado_programacion\ejemplo_calculadora\obj\D
 C:\Users\admin\Documents\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_calculadora.csproj.CoreCompileInputs.cache
 C:\Users\admin\Documents\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_calculadora.exe
 C:\Users\admin\Documents\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_calculadora.pdb
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_calculadora.csproj.AssemblyReference.cache
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_calculadora.Form1.resources
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_calculadora.Form2.resources
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_calculadora.Properties.Resources.resources
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_calculadora.csproj.GenerateResource.cache
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_calculadora.csproj.CoreCompileInputs.cache
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_calculadora.exe
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_calculadora.pdb
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\bin\Debug\ejemplo_calculadora.exe.config
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\bin\Debug\ejemplo_calculadora.exe
+C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\bin\Debug\ejemplo_calculadora.pdb

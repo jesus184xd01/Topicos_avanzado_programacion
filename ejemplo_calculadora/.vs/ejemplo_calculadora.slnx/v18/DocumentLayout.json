@@ -1,22 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\",
+  "WorkspaceRootPath": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\aribnb\\topicos_avanzado_programacion\\ejemplo_calculadora\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|c:\\users\\asus\\onedrive\\documentos\\repos\\topicos_avanzado_programacion\\ejemplo_calculadora\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\expressionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\expressionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:expressionhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\calculatorengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:calculatorengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|c:\\users\\asus\\onedrive\\documentos\\repos\\topicos_avanzado_programacion\\ejemplo_calculadora\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\calculatorengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:calculatorengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,23 +46,74 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ExpressionHelper.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\ExpressionHelper.cs",
-              "RelativeDocumentMoniker": "ExpressionHelper.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\ExpressionHelper.cs",
-              "RelativeToolTip": "ExpressionHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Properties\\Resources.resx",
+              "RelativeToolTip": "Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-02-19T18:00:45.64Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T17:20:55.669Z"
+              "WhenOpened": "2026-02-17T18:29:15.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form2.cs",
+              "RelativeToolTip": "Form2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T18:08:14.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form2.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form2.cs",
+              "RelativeDocumentMoniker": "Form2.cs",
+              "ToolTip": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form2.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Form2.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T17:54:07.424Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "ExpressionHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\ExpressionHelper.cs",
+              "RelativeDocumentMoniker": "ExpressionHelper.cs",
+              "ToolTip": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\ExpressionHelper.cs",
+              "RelativeToolTip": "ExpressionHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-17T17:20:55.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Calculatorengine.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Calculatorengine.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Calculatorengine.cs",
               "RelativeDocumentMoniker": "Calculatorengine.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Calculatorengine.cs",
+              "ToolTip": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Calculatorengine.cs",
               "RelativeToolTip": "Calculatorengine.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -54,27 +121,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form1.cs",
+              "ToolTip": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAwwFgAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAADwv+gCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-17T17:07:46.751Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Asus\\OneDrive\\Documentos\\repos\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form1.cs [Dise\u00F1o]",
               "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T17:07:45.321Z"
+              "WhenOpened": "2026-02-17T17:07:45.321Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
