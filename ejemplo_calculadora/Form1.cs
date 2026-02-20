@@ -47,7 +47,7 @@ namespace ejemplo_calculadora
 
         private void ConfigureWindow()
         {
-            this.Size = new Size(CalculatorConstants.WINDOW_WIDTH, CalculatorConstants.WINDOW_HEIGHT);
+            this.Size = new Size(CalculatorConstants.WINDOW_WIDTH, CalculatorConstants.WINDOW_HEIGHT + 80);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -741,5 +741,12 @@ namespace ejemplo_calculadora
         }
 
         #endregion
+
+        private void btn_menu_Click(object sender, EventArgs e)
+        {
+            Form2 menuForm = new Form2();
+            menuForm.Show();
+            this.Hide();
+        }
     }
 }

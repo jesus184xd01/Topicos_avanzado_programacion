@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_library = new System.Windows.Forms.Button();
+            this.btn_calculadora = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button2
+            // btn_library
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(212, 258);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(337, 81);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_library.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_library.Location = new System.Drawing.Point(212, 258);
+            this.btn_library.Name = "btn_library";
+            this.btn_library.Size = new System.Drawing.Size(337, 81);
+            this.btn_library.TabIndex = 1;
+            this.btn_library.Text = "button2";
+            this.btn_library.UseVisualStyleBackColor = true;
+            this.btn_library.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btn_calculadora
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(212, 171);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(337, 81);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_calculadora.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_calculadora.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_calculadora.Location = new System.Drawing.Point(212, 171);
+            this.btn_calculadora.Name = "btn_calculadora";
+            this.btn_calculadora.Size = new System.Drawing.Size(337, 81);
+            this.btn_calculadora.TabIndex = 0;
+            this.btn_calculadora.Text = "button1";
+            this.btn_calculadora.UseVisualStyleBackColor = false;
+            this.btn_calculadora.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
@@ -73,8 +73,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(782, 553);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_library);
+            this.Controls.Add(this.btn_calculadora);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.Name = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -85,8 +85,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_library;
+        private System.Windows.Forms.Button btn_calculadora;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

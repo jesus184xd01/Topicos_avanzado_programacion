@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../../../Vectores/Libreria_Vectores/Libreria_Vectores.csproj" Id="a9b4158c-0541-4a45-81c6-1bd9d4d8a1ad" />
   <Project Path="ejemplo_calculadora.csproj" Id="ce62f556-5139-48cc-84a7-34812986b61e" />
 </Solution>

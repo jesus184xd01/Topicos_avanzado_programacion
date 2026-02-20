@@ -52,29 +52,29 @@ namespace ejemplo_calculadora
             Size tamanoBoton = new Size(300, 60);
 
             // Botón 1 (Estilo Principal)
-            button1.Text = "CALCULADORA CIENTÍFICA";
-            button1.Size = tamanoBoton;
-            button1.BackColor = azulItesi;
-            button1.ForeColor = blancoPuro;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-            button1.Cursor = Cursors.Hand;
+            btn_calculadora.Text = "CALCULADORA CIENTÍFICA";
+            btn_calculadora.Size = tamanoBoton;
+            btn_calculadora.BackColor = azulItesi;
+            btn_calculadora.ForeColor = blancoPuro;
+            btn_calculadora.FlatStyle = FlatStyle.Flat;
+            btn_calculadora.FlatAppearance.BorderSize = 0;
+            btn_calculadora.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            btn_calculadora.Cursor = Cursors.Hand;
 
             // Botón 2 (Estilo Secundario)
-            button2.Text = "GESTIÓN DE LIBRERÍAS";
-            button2.Size = tamanoBoton;
-            button2.BackColor = Color.FromArgb(45, 85, 140); // Un azul más claro
-            button2.ForeColor = blancoPuro;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-            button2.Cursor = Cursors.Hand;
+            btn_library.Text = "GESTIÓN DE LIBRERÍAS";
+            btn_library.Size = tamanoBoton;
+            btn_library.BackColor = Color.FromArgb(45, 85, 140); // Un azul más claro
+            btn_library.ForeColor = blancoPuro;
+            btn_library.FlatStyle = FlatStyle.Flat;
+            btn_library.FlatAppearance.BorderSize = 0;
+            btn_library.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+            btn_library.Cursor = Cursors.Hand;
 
             // 5. Posicionamiento Central
-            int centroX = (this.ClientSize.Width - button1.Width) / 2;
-            button1.Location = new Point(centroX, 220);
-            button2.Location = new Point(centroX, 300);
+            int centroX = (this.ClientSize.Width - btn_calculadora.Width) / 2;
+            btn_calculadora.Location = new Point(centroX, 220);
+            btn_library.Location = new Point(centroX, 300);
 
             // 6. Decoración: Barra inferior (Footer)
             Panel panelFooter = new Panel();
@@ -92,8 +92,18 @@ namespace ejemplo_calculadora
             panelFooter.Controls.Add(lblCopy);
         }
 
-        private void button1_Click(object sender, EventArgs e) { }
-        private void button2_Click(object sender, EventArgs e) { }
+        private void button1_Click(object sender, EventArgs e) //boton que redirije a la calculadora
+        {
+            Form1 formcalculadora = new Form1();
+            formcalculadora.Show();
+            this.Hide();
+        }
+        private void button2_Click(object sender, EventArgs e) //boton que redirije a la biblioteca
+        {
+            Form_vectores formbiblioteca = new Form_vectores();
+            formbiblioteca.Show();
+            this.Hide();
+        }
         private void Form2_Load(object sender, EventArgs e) { }
     }
 }

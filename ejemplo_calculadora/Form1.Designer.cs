@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_rad = new System.Windows.Forms.Button();
             this.btn_parentesis_cierra = new System.Windows.Forms.Button();
             this.btn_parentesis_abre = new System.Windows.Forms.Button();
             this.btn_off = new System.Windows.Forms.Button();
@@ -58,13 +59,14 @@
             this.btn_3 = new System.Windows.Forms.Button();
             this.btn_2 = new System.Windows.Forms.Button();
             this.btn_1 = new System.Windows.Forms.Button();
-            this.btn_rad = new System.Windows.Forms.Button();
+            this.btn_menu = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.Controls.Add(this.btn_menu);
             this.panel1.Controls.Add(this.btn_rad);
             this.panel1.Controls.Add(this.btn_parentesis_cierra);
             this.panel1.Controls.Add(this.btn_parentesis_abre);
@@ -97,9 +99,20 @@
             this.panel1.Controls.Add(this.btn_1);
             this.panel1.Location = new System.Drawing.Point(12, 32);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(370, 542);
+            this.panel1.Size = new System.Drawing.Size(370, 644);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btn_rad
+            // 
+            this.btn_rad.BackColor = System.Drawing.Color.MediumAquamarine;
+            this.btn_rad.Location = new System.Drawing.Point(159, 452);
+            this.btn_rad.Name = "btn_rad";
+            this.btn_rad.Size = new System.Drawing.Size(58, 61);
+            this.btn_rad.TabIndex = 29;
+            this.btn_rad.Text = "Rad";
+            this.btn_rad.UseVisualStyleBackColor = false;
+            this.btn_rad.Click += new System.EventHandler(this.btn_rad_Click);
             // 
             // btn_parentesis_cierra
             // 
@@ -420,16 +433,16 @@
             this.btn_1.UseVisualStyleBackColor = false;
             this.btn_1.Click += new System.EventHandler(this.numero_Click);
             // 
-            // btn_rad
+            // btn_menu
             // 
-            this.btn_rad.BackColor = System.Drawing.Color.MediumAquamarine;
-            this.btn_rad.Location = new System.Drawing.Point(159, 452);
-            this.btn_rad.Name = "btn_rad";
-            this.btn_rad.Size = new System.Drawing.Size(58, 61);
-            this.btn_rad.TabIndex = 29;
-            this.btn_rad.Text = "Rad";
-            this.btn_rad.UseVisualStyleBackColor = false;
-            this.btn_rad.Click += new System.EventHandler(this.btn_rad_Click);
+            this.btn_menu.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.btn_menu.Location = new System.Drawing.Point(15, 542);
+            this.btn_menu.Name = "btn_menu";
+            this.btn_menu.Size = new System.Drawing.Size(336, 61);
+            this.btn_menu.TabIndex = 30;
+            this.btn_menu.Text = "Volver";
+            this.btn_menu.UseVisualStyleBackColor = false;
+            this.btn_menu.Click += new System.EventHandler(this.btn_menu_Click);
             // 
             // Form1
             // 
@@ -479,6 +492,7 @@
         private System.Windows.Forms.Button btn_parentesis_cierra;
         private System.Windows.Forms.Button btn_parentesis_abre;
         private System.Windows.Forms.Button btn_rad;
+        private System.Windows.Forms.Button btn_menu;
     }
 }
 

@@ -39,3 +39,8 @@ C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_ca
 C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\bin\Debug\ejemplo_calculadora.exe.config
 C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\bin\Debug\ejemplo_calculadora.exe
 C:\Users\Asus\OneDrive\Documentos\repos\Topicos_avanzado_programacion\ejemplo_calculadora\bin\Debug\ejemplo_calculadora.pdb
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_calculadora.Form2.resources
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_calculadora.Form_vectores.resources
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\bin\Debug\Libreria_Vectores.dll
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\bin\Debug\Libreria_Vectores.pdb
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\ejemplo_calculadora\obj\Debug\ejemplo_.0F8A6D25.Up2Date
