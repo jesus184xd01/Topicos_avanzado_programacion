@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A9B4158C-0541-4A45-81C6-1BD9D4D8A1AD}|..\\..\\..\\Vectores\\Libreria_Vectores\\Libreria_Vectores.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\vectores\\libreria_vectores\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\aribnb\\topicos_avanzado_programacion\\ejemplo_calculadora\\form_vectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\form_vectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:form_vectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\aribnb\\topicos_avanzado_programacion\\ejemplo_calculadora\\form_vectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:form_vectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\aribnb\\topicos_avanzado_programacion\\ejemplo_calculadora\\forms_graphics_vectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CE62F556-5139-48CC-84A7-34812986B61E}|ejemplo_calculadora.csproj|solutionrelative:forms_graphics_vectores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9B4158C-0541-4A45-81C6-1BD9D4D8A1AD}|..\\..\\..\\Vectores\\Libreria_Vectores\\Libreria_Vectores.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\vectores\\libreria_vectores\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,45 +21,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Class1.cs",
               "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\Vectores\\Libreria_Vectores\\Class1.cs",
               "RelativeDocumentMoniker": "..\\..\\..\\Vectores\\Libreria_Vectores\\Class1.cs",
               "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\Vectores\\Libreria_Vectores\\Class1.cs",
               "RelativeToolTip": "..\\..\\..\\Vectores\\Libreria_Vectores\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAQwF4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T16:49:32.038Z",
+              "WhenOpened": "2026-02-22T00:49:15.181Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form_vectores.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form_vectores.cs",
-              "RelativeDocumentMoniker": "Form_vectores.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form_vectores.cs",
-              "RelativeToolTip": "Form_vectores.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAACAAAAAsAAAAAAAAAA==",
+              "Title": "Forms_graphics_vectores.cs",
+              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Forms_graphics_vectores.cs",
+              "RelativeDocumentMoniker": "Forms_graphics_vectores.cs",
+              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Forms_graphics_vectores.cs",
+              "RelativeToolTip": "Forms_graphics_vectores.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwA4BAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T16:41:05.757Z",
+              "WhenOpened": "2026-02-22T00:38:44.99Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form_vectores.cs [Dise\u00F1o]",
+              "DocumentIndex": 0,
+              "Title": "Form_vectores.cs",
               "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form_vectores.cs",
               "RelativeDocumentMoniker": "Form_vectores.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form_vectores.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Form_vectores.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\ejemplo_calculadora\\Form_vectores.cs*",
+              "RelativeToolTip": "Form_vectores.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-20T16:39:04.293Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-02-20T16:41:05.757Z",
+              "EditorCaption": ""
             }
           ]
         }

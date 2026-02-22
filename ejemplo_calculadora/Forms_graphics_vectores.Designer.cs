@@ -1,6 +1,6 @@
 ﻿namespace ejemplo_calculadora
 {
-    partial class Form_vectores
+    partial class Forms_graphics_vectores
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Form_vectores
+            // Forms_graphics_vectores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form_vectores";
-            this.Text = "Form_vectores";
+            this.Name = "Forms_graphics_vectores";
+            this.Text = "Forms_graphics_vectores";
             this.ResumeLayout(false);
 
         }

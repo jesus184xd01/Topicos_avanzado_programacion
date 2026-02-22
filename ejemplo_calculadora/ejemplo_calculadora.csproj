@@ -69,6 +69,12 @@
     <Compile Include="FormGrafica.Designer.cs">
       <DependentUpon>FormGrafica.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms_graphics_vectores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_graphics_vectores.Designer.cs">
+      <DependentUpon>Forms_graphics_vectores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_vectores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_graphics_vectores.resx">
+      <DependentUpon>Forms_graphics_vectores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_vectores.resx">
       <DependentUpon>Form_vectores.cs</DependentUpon>
