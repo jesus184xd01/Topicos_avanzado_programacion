@@ -1,0 +1,7 @@
+C:\Users\admin\Downloads\hilos\hilos\obj\Debug\hilos.csproj.AssemblyReference.cache
+C:\Users\admin\Downloads\hilos\hilos\obj\Debug\hilos.csproj.CoreCompileInputs.cache
+C:\Users\admin\Downloads\hilos\hilos\bin\Debug\hilos.exe.config
+C:\Users\admin\Downloads\hilos\hilos\bin\Debug\hilos.exe
+C:\Users\admin\Downloads\hilos\hilos\bin\Debug\hilos.pdb
+C:\Users\admin\Downloads\hilos\hilos\obj\Debug\hilos.exe
+C:\Users\admin\Downloads\hilos\hilos\obj\Debug\hilos.pdb
