@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos3\hilos3\obj\Debug\hilos3.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos3\hilos3\obj\Debug\hilos3.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos3\hilos3\bin\Debug\hilos3.exe.config
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos3\hilos3\bin\Debug\hilos3.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos3\hilos3\bin\Debug\hilos3.pdb
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos3\hilos3\obj\Debug\hilos3.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos3\hilos3\obj\Debug\hilos3.pdb

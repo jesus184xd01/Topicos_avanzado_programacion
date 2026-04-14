@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos2\hilos2\bin\Debug\hilos2.exe.config
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos2\hilos2\bin\Debug\hilos2.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos2\hilos2\bin\Debug\hilos2.pdb
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos2\hilos2\obj\Debug\hilos2.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos2\hilos2\obj\Debug\hilos2.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos2\hilos2\obj\Debug\hilos2.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos2\hilos2\obj\Debug\hilos2.pdb

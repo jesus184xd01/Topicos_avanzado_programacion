@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\Topicos_avanzado_programacion\practica_multihilos\practica_multihilos\bin\Debug\practica_multihilos.exe.config
+C:\Users\admin\Documents\Topicos_avanzado_programacion\practica_multihilos\practica_multihilos\bin\Debug\practica_multihilos.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\practica_multihilos\practica_multihilos\bin\Debug\practica_multihilos.pdb
+C:\Users\admin\Documents\Topicos_avanzado_programacion\practica_multihilos\practica_multihilos\obj\Debug\practica_multihilos.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\practica_multihilos\practica_multihilos\obj\Debug\practica_multihilos.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\practica_multihilos\practica_multihilos\obj\Debug\practica_multihilos.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\practica_multihilos\practica_multihilos\obj\Debug\practica_multihilos.pdb

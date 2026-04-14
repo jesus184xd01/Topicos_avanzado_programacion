@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_4\hilos_4\obj\Debug\hilos_4.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_4\hilos_4\obj\Debug\hilos_4.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_4\hilos_4\bin\Debug\hilos_4.exe.config
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_4\hilos_4\bin\Debug\hilos_4.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_4\hilos_4\bin\Debug\hilos_4.pdb
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_4\hilos_4\obj\Debug\hilos_4.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_4\hilos_4\obj\Debug\hilos_4.pdb

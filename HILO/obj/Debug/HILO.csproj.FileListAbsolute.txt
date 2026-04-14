@@ -1,0 +1,20 @@
+C:\universidad\4-Semestre\Topicos de Programacion\HILO\bin\Debug\HILO.exe.config
+C:\universidad\4-Semestre\Topicos de Programacion\HILO\bin\Debug\HILO.exe
+C:\universidad\4-Semestre\Topicos de Programacion\HILO\bin\Debug\HILO.pdb
+C:\universidad\4-Semestre\Topicos de Programacion\HILO\obj\Debug\HILO.csproj.AssemblyReference.cache
+C:\universidad\4-Semestre\Topicos de Programacion\HILO\obj\Debug\HILO.Form1.resources
+C:\universidad\4-Semestre\Topicos de Programacion\HILO\obj\Debug\HILO.Properties.Resources.resources
+C:\universidad\4-Semestre\Topicos de Programacion\HILO\obj\Debug\HILO.csproj.GenerateResource.cache
+C:\universidad\4-Semestre\Topicos de Programacion\HILO\obj\Debug\HILO.csproj.CoreCompileInputs.cache
+C:\universidad\4-Semestre\Topicos de Programacion\HILO\obj\Debug\HILO.exe
+C:\universidad\4-Semestre\Topicos de Programacion\HILO\obj\Debug\HILO.pdb
+C:\Users\admin\Documents\Topicos_avanzado_programacion\HILO\bin\Debug\HILO.exe.config
+C:\Users\admin\Documents\Topicos_avanzado_programacion\HILO\bin\Debug\HILO.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\HILO\bin\Debug\HILO.pdb
+C:\Users\admin\Documents\Topicos_avanzado_programacion\HILO\obj\Debug\HILO.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\HILO\obj\Debug\HILO.Form1.resources
+C:\Users\admin\Documents\Topicos_avanzado_programacion\HILO\obj\Debug\HILO.Properties.Resources.resources
+C:\Users\admin\Documents\Topicos_avanzado_programacion\HILO\obj\Debug\HILO.csproj.GenerateResource.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\HILO\obj\Debug\HILO.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\HILO\obj\Debug\HILO.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\HILO\obj\Debug\HILO.pdb

@@ -1,0 +1,7 @@
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_5\hilos_5\obj\Debug\hilos_5.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_5\hilos_5\obj\Debug\hilos_5.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_5\hilos_5\bin\Debug\hilos_5.exe.config
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_5\hilos_5\bin\Debug\hilos_5.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_5\hilos_5\bin\Debug\hilos_5.pdb
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_5\hilos_5\obj\Debug\hilos_5.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\hilos_5\hilos_5\obj\Debug\hilos_5.pdb
