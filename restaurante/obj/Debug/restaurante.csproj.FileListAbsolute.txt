@@ -1,0 +1,11 @@
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\restaurante\bin\Debug\restaurante.exe.config
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\restaurante\bin\Debug\restaurante.exe
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\restaurante\bin\Debug\restaurante.pdb
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\restaurante\obj\Debug\restaurante.csproj.AssemblyReference.cache
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\restaurante\obj\Debug\restaurante.Form1.resources
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\restaurante\obj\Debug\restaurante.Properties.Resources.resources
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\restaurante\obj\Debug\restaurante.csproj.GenerateResource.cache
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\restaurante\obj\Debug\restaurante.csproj.CoreCompileInputs.cache
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\restaurante\obj\Debug\restaurante.exe
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\restaurante\obj\Debug\restaurante.pdb
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\restaurante\obj\Debug\restaurante.alimento_card.resources
