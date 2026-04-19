@@ -1,26 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\",
+  "WorkspaceRootPath": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|c:\\users\\admin\\documents\\topicos_avanzado_programacion\\restaurante\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B9548D1-6EEC-4CA7-81B3-8F33816C3F29}|Elementos de la soluci\u00F3n{1B9548D1-6EEC-4CA7-81B3-8F33816C3F29}|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Alimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B9548D1-6EEC-4CA7-81B3-8F33816C3F29}|Elementos de la soluci\u00F3n{1B9548D1-6EEC-4CA7-81B3-8F33816C3F29}|solutionrelative:Alimento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:alimento_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1B9548D1-6EEC-4CA7-81B3-8F33816C3F29}|Elementos de la soluci\u00F3n{1B9548D1-6EEC-4CA7-81B3-8F33816C3F29}|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\AlimentoDAO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1B9548D1-6EEC-4CA7-81B3-8F33816C3F29}|Elementos de la soluci\u00F3n{1B9548D1-6EEC-4CA7-81B3-8F33816C3F29}|solutionrelative:AlimentoDAO.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\aribnb\\topicos_avanzado_programacion\\restaurante\\alimento_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:alimento_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:alimento_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\restaurantedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:restaurantedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\bebida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:bebida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\postre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:postre.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\platillo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:platillo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,71 +46,116 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AlimentoDAO.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\AlimentoDAO.cs",
-              "RelativeDocumentMoniker": "AlimentoDAO.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\AlimentoDAO.cs",
-              "RelativeToolTip": "AlimentoDAO.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAmwEMAAAABAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "RestauranteDAO.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\RestauranteDAO.cs",
+              "RelativeDocumentMoniker": "RestauranteDAO.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\RestauranteDAO.cs",
+              "RelativeToolTip": "RestauranteDAO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T03:32:30.531Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-19T14:10:09.274Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Alimento.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Alimento.cs",
-              "RelativeDocumentMoniker": "Alimento.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Alimento.cs",
-              "RelativeToolTip": "Alimento.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAvAAAAAAAAAA==",
+              "Title": "alimento_card.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs",
+              "RelativeDocumentMoniker": "alimento_card.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs [Design]",
+              "RelativeToolTip": "alimento_card.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T03:31:27.913Z",
+              "WhenOpened": "2026-04-19T14:12:50.354Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "alimento_card.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs",
+              "RelativeDocumentMoniker": "alimento_card.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs",
+              "RelativeToolTip": "alimento_card.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAADwvx0AAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T14:12:53.363Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "alimento_card.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs",
-              "RelativeDocumentMoniker": "alimento_card.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs",
-              "RelativeToolTip": "alimento_card.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAmwCEAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T03:28:44.356Z",
+              "DocumentIndex": 0,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-04-19T14:02:37.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "alimento_card.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs",
-              "RelativeDocumentMoniker": "alimento_card.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs [Dise\u00F1o]",
-              "RelativeToolTip": "alimento_card.cs [Dise\u00F1o]",
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T02:18:23.948Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-04-19T17:13:54.783Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAPAAAAAAAAAAAAAAAPYAAAABAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "Postre.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\Postre.cs",
+              "RelativeDocumentMoniker": "Postre.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\Postre.cs",
+              "RelativeToolTip": "Postre.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T17:55:40.506Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-19T14:50:53.73Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Bebida.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\Bebida.cs",
+              "RelativeDocumentMoniker": "Bebida.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\Bebida.cs",
+              "RelativeToolTip": "Bebida.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T14:30:00.092Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Platillo.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\Platillo.cs",
+              "RelativeDocumentMoniker": "Platillo.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\Platillo.cs",
+              "RelativeToolTip": "Platillo.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwAwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T14:10:06.997Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAAiwCwBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T14:12:25.755Z"
             }
           ]
         }

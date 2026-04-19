@@ -20,3 +20,17 @@ C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_progra
 C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.exe
 C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.pdb
 C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.Form1.resources
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\bin\Debug\restaurante.exe.config
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\bin\Debug\restaurante.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\bin\Debug\restaurante.pdb
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\bin\Debug\System.Data.SqlClient.dll
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\bin\Debug\System.Data.SqlClient.xml
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.csproj.AssemblyReference.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.alimento_card.resources
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.Form1.resources
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.Properties.Resources.resources
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.csproj.GenerateResource.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.csproj.CoreCompileInputs.cache
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\restaura.A34C02FC.Up2Date
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.exe
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.pdb

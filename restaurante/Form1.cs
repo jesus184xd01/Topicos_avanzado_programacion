@@ -18,7 +18,7 @@ namespace restaurante
         private readonly int gapCards = 8;
 
         // ── Instancia del DAO ─────────────────────────────────────
-        private readonly AlimentoDAO dao = new AlimentoDAO();
+        private readonly RestauranteDAO dao = new RestauranteDAO();
 
         public Form1()
         {
@@ -145,30 +145,34 @@ namespace restaurante
         //  CARGA DE CARDS
         // ══════════════════════════════════════════════════════════
 
-        // ── Una columna (platillos y bebidas) ─────────────────────
-        private void CargarCards(Panel panel, List<Alimento> alimentos)
+        // ── Platillos (una columna) ───────────────────────────────
+        private void CargarCardsPlatillos(Panel panel, List<Platillo> lista)
         {
             foreach (Control c in panel.Controls.OfType<FlowLayoutPanel>().ToList())
                 panel.Controls.Remove(c);
 
             panel.AutoScroll = true;
 
-            FlowLayoutPanel flow = new FlowLayoutPanel();
-            flow.Dock = DockStyle.Fill;
-            flow.AutoScroll = true;
-            flow.Padding = new Padding(8);
-            flow.FlowDirection = FlowDirection.TopDown;
-            flow.WrapContents = false;
-            flow.BackColor = panel.BackColor;
-
-            foreach (var alimento in alimentos)
+            var flow = new FlowLayoutPanel
             {
-                alimento_card card = new alimento_card(alimento);
-                card.TopLevel = false;
-                card.FormBorderStyle = FormBorderStyle.None;
-                card.BackColor = panel.BackColor;
-                card.Margin = new Padding(4, 4, 4, 8);
-                card.Visible = true;
+                Dock = DockStyle.Fill,
+                AutoScroll = true,
+                Padding = new Padding(8),
+                FlowDirection = FlowDirection.TopDown,
+                WrapContents = false,
+                BackColor = panel.BackColor
+            };
+
+            foreach (var p in lista)
+            {
+                var card = new alimento_card(p)
+                {
+                    TopLevel = false,
+                    FormBorderStyle = FormBorderStyle.None,
+                    BackColor = panel.BackColor,
+                    Margin = new Padding(4, 4, 4, 8),
+                    Visible = true
+                };
                 flow.Controls.Add(card);
             }
 
@@ -176,30 +180,69 @@ namespace restaurante
             flow.BringToFront();
         }
 
-        // ── Dos columnas (postres) ────────────────────────────────
-        private void CargarCardsDosColumnas(Panel panel, List<Alimento> alimentos)
+        // ── Bebidas (una columna) ────────────────────────────────
+        private void CargarCardsBebidas(Panel panel, List<Bebida> lista)
         {
             foreach (Control c in panel.Controls.OfType<FlowLayoutPanel>().ToList())
                 panel.Controls.Remove(c);
 
             panel.AutoScroll = true;
 
-            FlowLayoutPanel flow = new FlowLayoutPanel();
-            flow.Dock = DockStyle.Fill;
-            flow.AutoScroll = true;
-            flow.Padding = new Padding(8);
-            flow.FlowDirection = FlowDirection.LeftToRight;
-            flow.WrapContents = true;
-            flow.BackColor = panel.BackColor;
-
-            foreach (var alimento in alimentos)
+            var flow = new FlowLayoutPanel
             {
-                alimento_card card = new alimento_card(alimento);
-                card.TopLevel = false;
-                card.FormBorderStyle = FormBorderStyle.None;
-                card.BackColor = panel.BackColor;
-                card.Margin = new Padding(4, 4, 4, 8);
-                card.Visible = true;
+                Dock = DockStyle.Fill,
+                AutoScroll = true,
+                Padding = new Padding(8),
+                FlowDirection = FlowDirection.TopDown,
+                WrapContents = false,
+                BackColor = panel.BackColor
+            };
+
+            foreach (var b in lista)
+            {
+                var card = new alimento_card(b)
+                {
+                    TopLevel = false,
+                    FormBorderStyle = FormBorderStyle.None,
+                    BackColor = panel.BackColor,
+                    Margin = new Padding(4, 4, 4, 8),
+                    Visible = true
+                };
+                flow.Controls.Add(card);
+            }
+
+            panel.Controls.Add(flow);
+            flow.BringToFront();
+        }
+
+        // ── Postres (dos columnas) ────────────────────────────────
+        private void CargarCardsPostres(Panel panel, List<Postre> lista)
+        {
+            foreach (Control c in panel.Controls.OfType<FlowLayoutPanel>().ToList())
+                panel.Controls.Remove(c);
+
+            panel.AutoScroll = true;
+
+            var flow = new FlowLayoutPanel
+            {
+                Dock = DockStyle.Fill,
+                AutoScroll = true,
+                Padding = new Padding(8),
+                FlowDirection = FlowDirection.LeftToRight,
+                WrapContents = true,
+                BackColor = panel.BackColor
+            };
+
+            foreach (var p in lista)
+            {
+                var card = new alimento_card(p)
+                {
+                    TopLevel = false,
+                    FormBorderStyle = FormBorderStyle.None,
+                    BackColor = panel.BackColor,
+                    Margin = new Padding(4, 4, 4, 8),
+                    Visible = true
+                };
                 flow.Controls.Add(card);
             }
 
@@ -212,19 +255,30 @@ namespace restaurante
         // ══════════════════════════════════════════════════════════
         private void CargarCategoria(string tipoDia)
         {
-            List<Alimento> platillos = dao.ObtenerPorCategoria("platillo", tipoDia);
-            List<Alimento> bebidas = dao.ObtenerPorCategoria("bebida", tipoDia);
-            List<Alimento> postres = dao.ObtenerPorCategoria("postre", tipoDia);
+            string titulo = char.ToUpper(tipoDia[0]) + tipoDia.Substring(1);
 
-            CargarCards(panel_meals, platillos);
-            CargarCards(panel_drinks, bebidas);
-            CargarCardsDosColumnas(panel_desserts, postres);
+            lbl_title_meals.Text = $"Platillos — {titulo}";
+            lbl_title_drinks.Text = $"Bebidas — {titulo}";
+            lbl_title_desserts.Text = $"Postres — {titulo}";
+
+            List<Platillo> platillos = dao.ObtenerPlatillos(tipoDia);
+            List<Bebida> bebidas = dao.ObtenerBebidas(tipoDia);
+            List<Postre> postres = dao.ObtenerPostres(tipoDia);
+
+            CargarCardsPlatillos(panel_meals, platillos);
+            CargarCardsBebidas(panel_drinks, bebidas);
+            CargarCardsPostres(panel_desserts, postres);
         }
 
         private void btn_desayuno_Click(object sender, EventArgs e) => CargarCategoria("desayuno");
         private void btn_almuerzo_Click(object sender, EventArgs e) => CargarCategoria("almuerzo");
         private void btn_comida_Click(object sender, EventArgs e) => CargarCategoria("comida");
         private void btn_cena_Click(object sender, EventArgs e) => CargarCategoria("cena");
+
+        private void btn_administrar_Click(object sender, EventArgs e)
+        {
+            // aquí irá el form de administración
+        }
 
         // ══════════════════════════════════════════════════════════
         //  EVENTOS PAINT
