@@ -297,5 +297,11 @@ namespace restaurante
             settings(sender, e);
             CargarCategoria("desayuno");
         }
+
+        private void btn_administrar_Click_1(object sender, EventArgs e)
+        {
+            management frmManagement = new management();
+            frmManagement.ShowDialog();
+        }
     }
 }

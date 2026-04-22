@@ -32,17 +32,17 @@
             this.panel_fondo = new System.Windows.Forms.Panel();
             this.btn_administrar = new System.Windows.Forms.Button();
             this.panel_container = new System.Windows.Forms.Panel();
+            this.lbl_title_desserts = new System.Windows.Forms.Label();
+            this.lbl_title_drinks = new System.Windows.Forms.Label();
+            this.lbl_title_meals = new System.Windows.Forms.Label();
+            this.panel_desserts = new System.Windows.Forms.Panel();
+            this.panel_drinks = new System.Windows.Forms.Panel();
+            this.panel_meals = new System.Windows.Forms.Panel();
             this.btn_cena = new System.Windows.Forms.Button();
             this.btn_comida = new System.Windows.Forms.Button();
             this.btn_almuerzo = new System.Windows.Forms.Button();
             this.btn_desayuno = new System.Windows.Forms.Button();
             this.title_lbl = new System.Windows.Forms.Label();
-            this.panel_meals = new System.Windows.Forms.Panel();
-            this.panel_drinks = new System.Windows.Forms.Panel();
-            this.panel_desserts = new System.Windows.Forms.Panel();
-            this.lbl_title_meals = new System.Windows.Forms.Label();
-            this.lbl_title_drinks = new System.Windows.Forms.Label();
-            this.lbl_title_desserts = new System.Windows.Forms.Label();
             this.panel_fondo.SuspendLayout();
             this.panel_container.SuspendLayout();
             this.SuspendLayout();
@@ -76,6 +76,7 @@
             this.btn_administrar.TabIndex = 10;
             this.btn_administrar.Text = "ADMINISTRAR";
             this.btn_administrar.UseVisualStyleBackColor = false;
+            this.btn_administrar.Click += new System.EventHandler(this.btn_administrar_Click_1);
             // 
             // panel_container
             // 
@@ -94,6 +95,78 @@
             this.panel_container.Size = new System.Drawing.Size(1100, 564);
             this.panel_container.TabIndex = 9;
             this.panel_container.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lbl_title_desserts
+            // 
+            this.lbl_title_desserts.AutoSize = true;
+            this.lbl_title_desserts.BackColor = System.Drawing.Color.Black;
+            this.lbl_title_desserts.Font = new System.Drawing.Font("Mistral", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title_desserts.ForeColor = System.Drawing.Color.White;
+            this.lbl_title_desserts.Image = global::restaurante.Properties.Resources.fondo_foods;
+            this.lbl_title_desserts.Location = new System.Drawing.Point(505, 312);
+            this.lbl_title_desserts.Name = "lbl_title_desserts";
+            this.lbl_title_desserts.Size = new System.Drawing.Size(116, 39);
+            this.lbl_title_desserts.TabIndex = 4;
+            this.lbl_title_desserts.Text = "POSTRES";
+            // 
+            // lbl_title_drinks
+            // 
+            this.lbl_title_drinks.AutoSize = true;
+            this.lbl_title_drinks.BackColor = System.Drawing.Color.Black;
+            this.lbl_title_drinks.Font = new System.Drawing.Font("Mistral", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title_drinks.ForeColor = System.Drawing.Color.White;
+            this.lbl_title_drinks.Image = global::restaurante.Properties.Resources.fondo_foods;
+            this.lbl_title_drinks.Location = new System.Drawing.Point(789, 8);
+            this.lbl_title_drinks.Name = "lbl_title_drinks";
+            this.lbl_title_drinks.Size = new System.Drawing.Size(118, 39);
+            this.lbl_title_drinks.TabIndex = 4;
+            this.lbl_title_drinks.Text = "BEBIDAS";
+            // 
+            // lbl_title_meals
+            // 
+            this.lbl_title_meals.AutoSize = true;
+            this.lbl_title_meals.BackColor = System.Drawing.Color.Black;
+            this.lbl_title_meals.Font = new System.Drawing.Font("Mistral", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title_meals.ForeColor = System.Drawing.Color.White;
+            this.lbl_title_meals.Image = global::restaurante.Properties.Resources.fondo_foods;
+            this.lbl_title_meals.Location = new System.Drawing.Point(233, 8);
+            this.lbl_title_meals.Name = "lbl_title_meals";
+            this.lbl_title_meals.Size = new System.Drawing.Size(131, 39);
+            this.lbl_title_meals.TabIndex = 3;
+            this.lbl_title_meals.Text = "PLATILLOS";
+            // 
+            // panel_desserts
+            // 
+            this.panel_desserts.BackColor = System.Drawing.Color.DimGray;
+            this.panel_desserts.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_desserts.BackgroundImage")));
+            this.panel_desserts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_desserts.Location = new System.Drawing.Point(51, 356);
+            this.panel_desserts.Name = "panel_desserts";
+            this.panel_desserts.Size = new System.Drawing.Size(983, 152);
+            this.panel_desserts.TabIndex = 2;
+            this.panel_desserts.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_desserts_Paint);
+            // 
+            // panel_drinks
+            // 
+            this.panel_drinks.BackColor = System.Drawing.Color.DimGray;
+            this.panel_drinks.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_drinks.BackgroundImage")));
+            this.panel_drinks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_drinks.Location = new System.Drawing.Point(597, 49);
+            this.panel_drinks.Name = "panel_drinks";
+            this.panel_drinks.Size = new System.Drawing.Size(437, 279);
+            this.panel_drinks.TabIndex = 1;
+            this.panel_drinks.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_drinks_Paint);
+            // 
+            // panel_meals
+            // 
+            this.panel_meals.BackColor = System.Drawing.Color.DimGray;
+            this.panel_meals.BackgroundImage = global::restaurante.Properties.Resources.fondo_foods;
+            this.panel_meals.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel_meals.Location = new System.Drawing.Point(51, 52);
+            this.panel_meals.Name = "panel_meals";
+            this.panel_meals.Size = new System.Drawing.Size(488, 277);
+            this.panel_meals.TabIndex = 0;
+            this.panel_meals.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_meals_Paint);
             // 
             // btn_cena
             // 
@@ -165,78 +238,6 @@
             this.title_lbl.Size = new System.Drawing.Size(525, 95);
             this.title_lbl.TabIndex = 0;
             this.title_lbl.Text = "MENU MEXICANO";
-            // 
-            // panel_meals
-            // 
-            this.panel_meals.BackColor = System.Drawing.Color.DimGray;
-            this.panel_meals.BackgroundImage = global::restaurante.Properties.Resources.fondo_foods;
-            this.panel_meals.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_meals.Location = new System.Drawing.Point(51, 52);
-            this.panel_meals.Name = "panel_meals";
-            this.panel_meals.Size = new System.Drawing.Size(488, 277);
-            this.panel_meals.TabIndex = 0;
-            this.panel_meals.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_meals_Paint);
-            // 
-            // panel_drinks
-            // 
-            this.panel_drinks.BackColor = System.Drawing.Color.DimGray;
-            this.panel_drinks.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_drinks.BackgroundImage")));
-            this.panel_drinks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_drinks.Location = new System.Drawing.Point(597, 49);
-            this.panel_drinks.Name = "panel_drinks";
-            this.panel_drinks.Size = new System.Drawing.Size(437, 279);
-            this.panel_drinks.TabIndex = 1;
-            this.panel_drinks.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_drinks_Paint);
-            // 
-            // panel_desserts
-            // 
-            this.panel_desserts.BackColor = System.Drawing.Color.DimGray;
-            this.panel_desserts.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_desserts.BackgroundImage")));
-            this.panel_desserts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_desserts.Location = new System.Drawing.Point(51, 356);
-            this.panel_desserts.Name = "panel_desserts";
-            this.panel_desserts.Size = new System.Drawing.Size(983, 152);
-            this.panel_desserts.TabIndex = 2;
-            this.panel_desserts.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_desserts_Paint);
-            // 
-            // lbl_title_meals
-            // 
-            this.lbl_title_meals.AutoSize = true;
-            this.lbl_title_meals.BackColor = System.Drawing.Color.Black;
-            this.lbl_title_meals.Font = new System.Drawing.Font("Mistral", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title_meals.ForeColor = System.Drawing.Color.White;
-            this.lbl_title_meals.Image = global::restaurante.Properties.Resources.fondo_foods;
-            this.lbl_title_meals.Location = new System.Drawing.Point(233, 8);
-            this.lbl_title_meals.Name = "lbl_title_meals";
-            this.lbl_title_meals.Size = new System.Drawing.Size(137, 41);
-            this.lbl_title_meals.TabIndex = 3;
-            this.lbl_title_meals.Text = "PLATILLOS";
-            // 
-            // lbl_title_drinks
-            // 
-            this.lbl_title_drinks.AutoSize = true;
-            this.lbl_title_drinks.BackColor = System.Drawing.Color.Black;
-            this.lbl_title_drinks.Font = new System.Drawing.Font("Mistral", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title_drinks.ForeColor = System.Drawing.Color.White;
-            this.lbl_title_drinks.Image = global::restaurante.Properties.Resources.fondo_foods;
-            this.lbl_title_drinks.Location = new System.Drawing.Point(789, 8);
-            this.lbl_title_drinks.Name = "lbl_title_drinks";
-            this.lbl_title_drinks.Size = new System.Drawing.Size(122, 41);
-            this.lbl_title_drinks.TabIndex = 4;
-            this.lbl_title_drinks.Text = "BEBIDAS";
-            // 
-            // lbl_title_desserts
-            // 
-            this.lbl_title_desserts.AutoSize = true;
-            this.lbl_title_desserts.BackColor = System.Drawing.Color.Black;
-            this.lbl_title_desserts.Font = new System.Drawing.Font("Mistral", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_title_desserts.ForeColor = System.Drawing.Color.White;
-            this.lbl_title_desserts.Image = global::restaurante.Properties.Resources.fondo_foods;
-            this.lbl_title_desserts.Location = new System.Drawing.Point(505, 312);
-            this.lbl_title_desserts.Name = "lbl_title_desserts";
-            this.lbl_title_desserts.Size = new System.Drawing.Size(121, 41);
-            this.lbl_title_desserts.TabIndex = 4;
-            this.lbl_title_desserts.Text = "POSTRES";
             // 
             // Form1
             // 
