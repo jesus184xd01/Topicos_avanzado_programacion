@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -42,8 +39,7 @@ namespace restaurante
 
             // ── Título ───────────────────────────────────────────
             title_lbl.Location = new Point(
-                (panel_fondo.Width - title_lbl.Width) / 2,
-                10
+                (panel_fondo.Width - title_lbl.Width) / 2, 10
             );
 
             // ── Botones categorías ───────────────────────────────
@@ -57,7 +53,7 @@ namespace restaurante
             btn_comida.Location = new Point(startX + (btn_desayuno.Width + espaciado) * 2, posY);
             btn_cena.Location = new Point(startX + (btn_desayuno.Width + espaciado) * 3, posY);
 
-            // ── Botón administrar al final de la fila ────────────
+            // ── Botón administrar ────────────────────────────────
             btn_administrar.Location = new Point(
                 btn_cena.Location.X + btn_cena.Width + espaciado,
                 posY + (btn_cena.Height / 2) - (btn_administrar.Height / 2)
@@ -73,7 +69,6 @@ namespace restaurante
                 this.ClientSize.Height - topContenedor - 10
             );
 
-            // deshabilitar scroll del panel contenedor
             panel_container.AutoScroll = false;
             panel_container.HorizontalScroll.Visible = false;
             panel_container.VerticalScroll.Visible = false;
@@ -86,25 +81,19 @@ namespace restaurante
             int tituloAlto = 28;
             int reduccion = 100;
 
-            // ancho paneles superiores
             int anchoPanelUnaCol = (cardAncho - reduccion) + (padding * 2);
-
-            // ancho y alto panel postres fijo
             int anchoPanelTresCols = ((cardAncho - reduccion) * 2) + (gapCards * 2) + (padding * 2) - 10;
             int altoPanelDesserts = (int)(cardAlto * 0.8) + 20;
 
-            // alto paneles superiores
             int espacioUtil = panel_container.Height
                             - (padding * 3)
                             - (tituloAlto * 2)
                             - altoPanelDesserts;
             int altoArriba = espacioUtil - 80;
 
-            // posiciones Y
             int startYArriba = tituloAlto + padding;
             int startYAbajo = startYArriba + altoArriba + padding + tituloAlto;
 
-            // centrar paneles superiores
             int anchoDosPanel = (anchoPanelUnaCol * 2) + gapEntrePaneles;
             int startXArriba = (panel_container.Width / 2) - (anchoDosPanel / 2);
 
@@ -142,15 +131,36 @@ namespace restaurante
         }
 
         // ══════════════════════════════════════════════════════════
-        //  CARGA DE CARDS
+        //  LIMPIEZA DE PANELES
         // ══════════════════════════════════════════════════════════
-
-        // ── Platillos (una columna) ───────────────────────────────
-        private void CargarCardsPlatillos(Panel panel, List<Platillo> lista)
+        private void LimpiarPanel(Panel panel)
         {
             foreach (Control c in panel.Controls.OfType<FlowLayoutPanel>().ToList())
-                panel.Controls.Remove(c);
+            {
+                foreach (Control card in c.Controls)
+                {
+                    if (card is alimento_card ac)
+                    {
+                        if (ac.Controls["img_icono"] is PictureBox pb && pb.Image != null)
+                        {
+                            pb.Image.Dispose();
+                            pb.Image = null;
+                        }
+                        ac.Dispose();
+                    }
+                }
+                c.Controls.Clear();
+                c.Dispose();
+            }
+            panel.Controls.Clear();
+        }
 
+        // ══════════════════════════════════════════════════════════
+        //  CARGA DE CARDS
+        // ══════════════════════════════════════════════════════════
+        private void CargarCardsPlatillos(Panel panel, List<Platillo> lista)
+        {
+            LimpiarPanel(panel);
             panel.AutoScroll = true;
 
             var flow = new FlowLayoutPanel
@@ -180,12 +190,9 @@ namespace restaurante
             flow.BringToFront();
         }
 
-        // ── Bebidas (una columna) ────────────────────────────────
         private void CargarCardsBebidas(Panel panel, List<Bebida> lista)
         {
-            foreach (Control c in panel.Controls.OfType<FlowLayoutPanel>().ToList())
-                panel.Controls.Remove(c);
-
+            LimpiarPanel(panel);
             panel.AutoScroll = true;
 
             var flow = new FlowLayoutPanel
@@ -215,12 +222,9 @@ namespace restaurante
             flow.BringToFront();
         }
 
-        // ── Postres (dos columnas) ────────────────────────────────
         private void CargarCardsPostres(Panel panel, List<Postre> lista)
         {
-            foreach (Control c in panel.Controls.OfType<FlowLayoutPanel>().ToList())
-                panel.Controls.Remove(c);
-
+            LimpiarPanel(panel);
             panel.AutoScroll = true;
 
             var flow = new FlowLayoutPanel
@@ -251,34 +255,52 @@ namespace restaurante
         }
 
         // ══════════════════════════════════════════════════════════
-        //  BOTONES CATEGORÍAS
+        //  CARGAR CATEGORÍA (asíncrono)
         // ══════════════════════════════════════════════════════════
-        private void CargarCategoria(string tipoDia)
+        private async Task CargarCategoria(string tipoDia)
         {
-            string titulo = char.ToUpper(tipoDia[0]) + tipoDia.Substring(1);
+            // Deshabilitar botones durante la carga
+            btn_desayuno.Enabled = false;
+            btn_almuerzo.Enabled = false;
+            btn_comida.Enabled = false;
+            btn_cena.Enabled = false;
 
+            string titulo = char.ToUpper(tipoDia[0]) + tipoDia.Substring(1);
             lbl_title_meals.Text = $"Platillos — {titulo}";
             lbl_title_drinks.Text = $"Bebidas — {titulo}";
             lbl_title_desserts.Text = $"Postres — {titulo}";
 
-            List<Platillo> platillos = dao.ObtenerPlatillos(tipoDia);
-            List<Bebida> bebidas = dao.ObtenerBebidas(tipoDia);
-            List<Postre> postres = dao.ObtenerPostres(tipoDia);
+            // Consultar BD en segundo plano
+            List<Platillo> platillos = null;
+            List<Bebida> bebidas = null;
+            List<Postre> postres = null;
 
+            await Task.Run(() =>
+            {
+                platillos = dao.ObtenerPlatillos(tipoDia);
+                bebidas = dao.ObtenerBebidas(tipoDia);
+                postres = dao.ObtenerPostres(tipoDia);
+            });
+
+            // Cargar cards en UI — imágenes cargan solas en async
             CargarCardsPlatillos(panel_meals, platillos);
             CargarCardsBebidas(panel_drinks, bebidas);
             CargarCardsPostres(panel_desserts, postres);
+
+            // Rehabilitar botones
+            btn_desayuno.Enabled = true;
+            btn_almuerzo.Enabled = true;
+            btn_comida.Enabled = true;
+            btn_cena.Enabled = true;
         }
 
-        private void btn_desayuno_Click(object sender, EventArgs e) => CargarCategoria("desayuno");
-        private void btn_almuerzo_Click(object sender, EventArgs e) => CargarCategoria("almuerzo");
-        private void btn_comida_Click(object sender, EventArgs e) => CargarCategoria("comida");
-        private void btn_cena_Click(object sender, EventArgs e) => CargarCategoria("cena");
-
-        private void btn_administrar_Click(object sender, EventArgs e)
-        {
-            // aquí irá el form de administración
-        }
+        // ══════════════════════════════════════════════════════════
+        //  EVENTOS BOTONES
+        // ══════════════════════════════════════════════════════════
+        private async void btn_desayuno_Click(object sender, EventArgs e) => await CargarCategoria("desayuno");
+        private async void btn_almuerzo_Click(object sender, EventArgs e) => await CargarCategoria("almuerzo");
+        private async void btn_comida_Click(object sender, EventArgs e) => await CargarCategoria("comida");
+        private async void btn_cena_Click(object sender, EventArgs e) => await CargarCategoria("cena");
 
         // ══════════════════════════════════════════════════════════
         //  EVENTOS PAINT
@@ -292,10 +314,10 @@ namespace restaurante
         // ══════════════════════════════════════════════════════════
         //  CARGA INICIAL
         // ══════════════════════════════════════════════════════════
-        private void Form1_Load(object sender, EventArgs e)
+        private async void Form1_Load(object sender, EventArgs e)
         {
             settings(sender, e);
-            CargarCategoria("desayuno");
+            await CargarCategoria("desayuno");
         }
 
         private void btn_administrar_Click_1(object sender, EventArgs e)

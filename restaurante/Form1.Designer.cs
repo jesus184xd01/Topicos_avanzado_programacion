@@ -59,8 +59,9 @@
             this.panel_fondo.Controls.Add(this.title_lbl);
             this.panel_fondo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_fondo.Location = new System.Drawing.Point(0, 0);
+            this.panel_fondo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_fondo.Name = "panel_fondo";
-            this.panel_fondo.Size = new System.Drawing.Size(1192, 857);
+            this.panel_fondo.Size = new System.Drawing.Size(1341, 1050);
             this.panel_fondo.TabIndex = 0;
             this.panel_fondo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_fondo_Paint);
             // 
@@ -69,10 +70,11 @@
             this.btn_administrar.BackColor = System.Drawing.Color.White;
             this.btn_administrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_administrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_administrar.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_administrar.Location = new System.Drawing.Point(1003, 776);
+            this.btn_administrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_administrar.Location = new System.Drawing.Point(1128, 970);
+            this.btn_administrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_administrar.Name = "btn_administrar";
-            this.btn_administrar.Size = new System.Drawing.Size(177, 42);
+            this.btn_administrar.Size = new System.Drawing.Size(199, 52);
             this.btn_administrar.TabIndex = 10;
             this.btn_administrar.Text = "ADMINISTRAR";
             this.btn_administrar.UseVisualStyleBackColor = false;
@@ -90,9 +92,10 @@
             this.panel_container.Controls.Add(this.panel_desserts);
             this.panel_container.Controls.Add(this.panel_drinks);
             this.panel_container.Controls.Add(this.panel_meals);
-            this.panel_container.Location = new System.Drawing.Point(30, 195);
+            this.panel_container.Location = new System.Drawing.Point(34, 244);
+            this.panel_container.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_container.Name = "panel_container";
-            this.panel_container.Size = new System.Drawing.Size(1100, 564);
+            this.panel_container.Size = new System.Drawing.Size(1238, 705);
             this.panel_container.TabIndex = 9;
             this.panel_container.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -100,12 +103,12 @@
             // 
             this.lbl_title_desserts.AutoSize = true;
             this.lbl_title_desserts.BackColor = System.Drawing.Color.Black;
-            this.lbl_title_desserts.Font = new System.Drawing.Font("Mistral", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title_desserts.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title_desserts.ForeColor = System.Drawing.Color.White;
             this.lbl_title_desserts.Image = global::restaurante.Properties.Resources.fondo_foods;
-            this.lbl_title_desserts.Location = new System.Drawing.Point(505, 312);
+            this.lbl_title_desserts.Location = new System.Drawing.Point(568, 390);
             this.lbl_title_desserts.Name = "lbl_title_desserts";
-            this.lbl_title_desserts.Size = new System.Drawing.Size(116, 39);
+            this.lbl_title_desserts.Size = new System.Drawing.Size(219, 46);
             this.lbl_title_desserts.TabIndex = 4;
             this.lbl_title_desserts.Text = "POSTRES";
             // 
@@ -113,12 +116,12 @@
             // 
             this.lbl_title_drinks.AutoSize = true;
             this.lbl_title_drinks.BackColor = System.Drawing.Color.Black;
-            this.lbl_title_drinks.Font = new System.Drawing.Font("Mistral", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title_drinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title_drinks.ForeColor = System.Drawing.Color.White;
             this.lbl_title_drinks.Image = global::restaurante.Properties.Resources.fondo_foods;
-            this.lbl_title_drinks.Location = new System.Drawing.Point(789, 8);
+            this.lbl_title_drinks.Location = new System.Drawing.Point(888, 10);
             this.lbl_title_drinks.Name = "lbl_title_drinks";
-            this.lbl_title_drinks.Size = new System.Drawing.Size(118, 39);
+            this.lbl_title_drinks.Size = new System.Drawing.Size(201, 46);
             this.lbl_title_drinks.TabIndex = 4;
             this.lbl_title_drinks.Text = "BEBIDAS";
             // 
@@ -126,12 +129,12 @@
             // 
             this.lbl_title_meals.AutoSize = true;
             this.lbl_title_meals.BackColor = System.Drawing.Color.Black;
-            this.lbl_title_meals.Font = new System.Drawing.Font("Mistral", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_title_meals.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title_meals.ForeColor = System.Drawing.Color.White;
             this.lbl_title_meals.Image = global::restaurante.Properties.Resources.fondo_foods;
-            this.lbl_title_meals.Location = new System.Drawing.Point(233, 8);
+            this.lbl_title_meals.Location = new System.Drawing.Point(262, 10);
             this.lbl_title_meals.Name = "lbl_title_meals";
-            this.lbl_title_meals.Size = new System.Drawing.Size(131, 39);
+            this.lbl_title_meals.Size = new System.Drawing.Size(241, 46);
             this.lbl_title_meals.TabIndex = 3;
             this.lbl_title_meals.Text = "PLATILLOS";
             // 
@@ -140,9 +143,10 @@
             this.panel_desserts.BackColor = System.Drawing.Color.DimGray;
             this.panel_desserts.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_desserts.BackgroundImage")));
             this.panel_desserts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_desserts.Location = new System.Drawing.Point(51, 356);
+            this.panel_desserts.Location = new System.Drawing.Point(57, 445);
+            this.panel_desserts.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_desserts.Name = "panel_desserts";
-            this.panel_desserts.Size = new System.Drawing.Size(983, 152);
+            this.panel_desserts.Size = new System.Drawing.Size(1106, 190);
             this.panel_desserts.TabIndex = 2;
             this.panel_desserts.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_desserts_Paint);
             // 
@@ -151,9 +155,10 @@
             this.panel_drinks.BackColor = System.Drawing.Color.DimGray;
             this.panel_drinks.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel_drinks.BackgroundImage")));
             this.panel_drinks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_drinks.Location = new System.Drawing.Point(597, 49);
+            this.panel_drinks.Location = new System.Drawing.Point(672, 61);
+            this.panel_drinks.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_drinks.Name = "panel_drinks";
-            this.panel_drinks.Size = new System.Drawing.Size(437, 279);
+            this.panel_drinks.Size = new System.Drawing.Size(492, 349);
             this.panel_drinks.TabIndex = 1;
             this.panel_drinks.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_drinks_Paint);
             // 
@@ -162,9 +167,10 @@
             this.panel_meals.BackColor = System.Drawing.Color.DimGray;
             this.panel_meals.BackgroundImage = global::restaurante.Properties.Resources.fondo_foods;
             this.panel_meals.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel_meals.Location = new System.Drawing.Point(51, 52);
+            this.panel_meals.Location = new System.Drawing.Point(57, 65);
+            this.panel_meals.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel_meals.Name = "panel_meals";
-            this.panel_meals.Size = new System.Drawing.Size(488, 277);
+            this.panel_meals.Size = new System.Drawing.Size(549, 346);
             this.panel_meals.TabIndex = 0;
             this.panel_meals.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_meals_Paint);
             // 
@@ -173,11 +179,12 @@
             this.btn_cena.BackColor = System.Drawing.Color.Red;
             this.btn_cena.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cena.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cena.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cena.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cena.ForeColor = System.Drawing.Color.White;
-            this.btn_cena.Location = new System.Drawing.Point(872, 128);
+            this.btn_cena.Location = new System.Drawing.Point(981, 160);
+            this.btn_cena.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_cena.Name = "btn_cena";
-            this.btn_cena.Size = new System.Drawing.Size(177, 42);
+            this.btn_cena.Size = new System.Drawing.Size(199, 52);
             this.btn_cena.TabIndex = 8;
             this.btn_cena.Text = "CENA";
             this.btn_cena.UseVisualStyleBackColor = false;
@@ -188,10 +195,11 @@
             this.btn_comida.BackColor = System.Drawing.Color.White;
             this.btn_comida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_comida.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_comida.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_comida.Location = new System.Drawing.Point(637, 128);
+            this.btn_comida.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_comida.Location = new System.Drawing.Point(717, 160);
+            this.btn_comida.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_comida.Name = "btn_comida";
-            this.btn_comida.Size = new System.Drawing.Size(177, 42);
+            this.btn_comida.Size = new System.Drawing.Size(199, 52);
             this.btn_comida.TabIndex = 7;
             this.btn_comida.Text = "COMIDA";
             this.btn_comida.UseVisualStyleBackColor = false;
@@ -202,10 +210,11 @@
             this.btn_almuerzo.BackColor = System.Drawing.Color.White;
             this.btn_almuerzo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_almuerzo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_almuerzo.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_almuerzo.Location = new System.Drawing.Point(376, 128);
+            this.btn_almuerzo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_almuerzo.Location = new System.Drawing.Point(423, 160);
+            this.btn_almuerzo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_almuerzo.Name = "btn_almuerzo";
-            this.btn_almuerzo.Size = new System.Drawing.Size(177, 42);
+            this.btn_almuerzo.Size = new System.Drawing.Size(199, 52);
             this.btn_almuerzo.TabIndex = 6;
             this.btn_almuerzo.Text = "ALMUERZO";
             this.btn_almuerzo.UseVisualStyleBackColor = false;
@@ -216,11 +225,12 @@
             this.btn_desayuno.BackColor = System.Drawing.Color.Green;
             this.btn_desayuno.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_desayuno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_desayuno.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_desayuno.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_desayuno.ForeColor = System.Drawing.Color.White;
-            this.btn_desayuno.Location = new System.Drawing.Point(116, 128);
+            this.btn_desayuno.Location = new System.Drawing.Point(130, 160);
+            this.btn_desayuno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn_desayuno.Name = "btn_desayuno";
-            this.btn_desayuno.Size = new System.Drawing.Size(177, 42);
+            this.btn_desayuno.Size = new System.Drawing.Size(199, 52);
             this.btn_desayuno.TabIndex = 1;
             this.btn_desayuno.Text = "DESAYUNO";
             this.btn_desayuno.UseVisualStyleBackColor = false;
@@ -230,21 +240,22 @@
             // 
             this.title_lbl.AutoSize = true;
             this.title_lbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.title_lbl.Font = new System.Drawing.Font("Mistral", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title_lbl.ForeColor = System.Drawing.Color.Red;
             this.title_lbl.Image = global::restaurante.Properties.Resources.fondo_menu;
-            this.title_lbl.Location = new System.Drawing.Point(322, 0);
+            this.title_lbl.Location = new System.Drawing.Point(362, 0);
             this.title_lbl.Name = "title_lbl";
-            this.title_lbl.Size = new System.Drawing.Size(525, 95);
+            this.title_lbl.Size = new System.Drawing.Size(878, 108);
             this.title_lbl.TabIndex = 0;
             this.title_lbl.Text = "MENU MEXICANO";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1192, 857);
+            this.ClientSize = new System.Drawing.Size(1341, 1050);
             this.Controls.Add(this.panel_fondo);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

@@ -34,7 +34,4 @@ C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\res
 C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\restaura.A34C02FC.Up2Date
 C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.exe
 C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.pdb
-C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\bin\Debug\System.Data.SqlClient.dll
-C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\bin\Debug\System.Data.SqlClient.xml
-C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.management.resources
-C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\obj\Debug\restaura.A34C02FC.Up2Date
+C:\Users\admin\Documents\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.management.resources

@@ -59,6 +59,7 @@
     <Compile Include="management.Designer.cs">
       <DependentUpon>management.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagementDAO.cs" />
     <Compile Include="Platillo.cs" />
     <Compile Include="Postre.cs" />
     <Compile Include="RestauranteDAO.cs" />

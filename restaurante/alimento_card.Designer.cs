@@ -32,7 +32,6 @@
             this.precio_lbl = new System.Windows.Forms.Label();
             this.lbl_nombre = new System.Windows.Forms.Label();
             this.lbl_precio = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.img_icono = new System.Windows.Forms.PictureBox();
@@ -46,7 +45,6 @@
             this.panel1.Controls.Add(this.precio_lbl);
             this.panel1.Controls.Add(this.lbl_nombre);
             this.panel1.Controls.Add(this.lbl_precio);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txt_descripcion);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.img_icono);
@@ -63,7 +61,7 @@
             this.precio_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.precio_lbl.ForeColor = System.Drawing.Color.White;
             this.precio_lbl.Image = global::restaurante.Properties.Resources.fondo_food_card;
-            this.precio_lbl.Location = new System.Drawing.Point(406, 179);
+            this.precio_lbl.Location = new System.Drawing.Point(418, 172);
             this.precio_lbl.Name = "precio_lbl";
             this.precio_lbl.Size = new System.Drawing.Size(0, 38);
             this.precio_lbl.TabIndex = 6;
@@ -86,22 +84,11 @@
             this.lbl_precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_precio.ForeColor = System.Drawing.Color.White;
             this.lbl_precio.Image = global::restaurante.Properties.Resources.fondo_food_card;
-            this.lbl_precio.Location = new System.Drawing.Point(459, 179);
+            this.lbl_precio.Location = new System.Drawing.Point(349, 177);
             this.lbl_precio.Name = "lbl_precio";
-            this.lbl_precio.Size = new System.Drawing.Size(0, 38);
+            this.lbl_precio.Size = new System.Drawing.Size(57, 38);
             this.lbl_precio.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Image = global::restaurante.Properties.Resources.fondo_food_card;
-            this.label2.Location = new System.Drawing.Point(356, 179);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 38);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "$";
+            this.lbl_precio.Text = "....";
             // 
             // txt_descripcion
             // 
@@ -131,6 +118,7 @@
             // 
             // img_icono
             // 
+            this.img_icono.InitialImage = null;
             this.img_icono.Location = new System.Drawing.Point(14, 15);
             this.img_icono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.img_icono.Name = "img_icono";
@@ -161,7 +149,6 @@
         private System.Windows.Forms.TextBox txt_descripcion;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox img_icono;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbl_precio;
         private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.Label precio_lbl;
