@@ -318,12 +318,24 @@ namespace restaurante
         {
             settings(sender, e);
             await CargarCategoria("desayuno");
+
+            //trackear coneccion
+            ConnectionMonitor.Iniciar(this);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ConnectionMonitor.Detener();   // ← detener el monitor al cerrar
         }
 
         private void btn_administrar_Click_1(object sender, EventArgs e)
         {
             management frmManagement = new management();
             frmManagement.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -3,52 +3,24 @@
   "WorkspaceRootPath": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\aribnb\\topicos_avanzado_programacion\\restaurante\\formsinconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:formsinconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\aribnb\\topicos_avanzado_programacion\\restaurante\\formsinconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:formsinconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\aribnb\\topicos_avanzado_programacion\\restaurante\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\aribnb\\topicos_avanzado_programacion\\restaurante\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:management.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:alimento_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\aribnb\\topicos_avanzado_programacion\\restaurante\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:alimento_card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\formsinconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:formsinconexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\restaurantedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:restaurantedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\bebida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:bebida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|c:\\universidad\\4-semestre\\topicos de programacion\\aribnb\\topicos_avanzado_programacion\\restaurante\\connectionmonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{261D1A49-F945-4AF0-9618-485664DE07B6}|restaurante.csproj|solutionrelative:connectionmonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,17 +30,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ConnectionMonitor.cs",
+              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\ConnectionMonitor.cs",
+              "RelativeDocumentMoniker": "ConnectionMonitor.cs",
+              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\ConnectionMonitor.cs",
+              "RelativeToolTip": "ConnectionMonitor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-24T16:11:23.056Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Form1.cs*",
+              "RelativeToolTip": "Form1.cs*",
+              "ViewState": "AgIAABYBAAAAAAAAAAAcwEgBAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-19T14:12:25.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\App.config",
+              "RelativeDocumentMoniker": "App.config",
+              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\App.config",
+              "RelativeToolTip": "App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-04-23T18:01:51.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "FormSinConexion.cs",
               "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\FormSinConexion.cs",
               "RelativeDocumentMoniker": "FormSinConexion.cs",
               "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\FormSinConexion.cs",
               "RelativeToolTip": "FormSinConexion.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCUAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAswIIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-23T18:15:09.915Z",
               "EditorCaption": ""
@@ -76,137 +87,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FormSinConexion.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\FormSinConexion.cs",
-              "RelativeDocumentMoniker": "FormSinConexion.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\FormSinConexion.cs [Dise\u00F1o]",
-              "RelativeToolTip": "FormSinConexion.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T18:14:58.744Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\App.config",
-              "RelativeDocumentMoniker": "App.config",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\App.config",
-              "RelativeToolTip": "App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-04-23T18:01:51.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "management.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\management.cs",
-              "RelativeDocumentMoniker": "management.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\management.cs",
-              "RelativeToolTip": "management.cs",
-              "ViewState": "AgIAAM8BAAAAAAAAAAAIwOABAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T00:44:44.871Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAcwBsAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T00:53:20.337Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Form1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Form1.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Form1.cs [Dise\u00F1o]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T17:13:54.783Z",
+              "WhenOpened": "2026-04-24T16:26:32.497Z",
               "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "management.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\management.cs",
-              "RelativeDocumentMoniker": "management.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\management.cs [Dise\u00F1o]",
-              "RelativeToolTip": "management.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-23T00:44:41.932Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAQwJIAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T14:12:25.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "RestauranteDAO.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\RestauranteDAO.cs",
-              "RelativeDocumentMoniker": "RestauranteDAO.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\RestauranteDAO.cs",
-              "RelativeToolTip": "RestauranteDAO.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAAAHwAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T14:10:09.274Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "alimento_card.cs [Design]",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs",
-              "RelativeDocumentMoniker": "alimento_card.cs",
-              "ToolTip": "C:\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Users\\admin\\Documents\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T14:12:50.354Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "alimento_card.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs",
-              "RelativeDocumentMoniker": "alimento_card.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\alimento_card.cs",
-              "RelativeToolTip": "alimento_card.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAswDAAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T14:12:53.363Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Bebida.cs",
-              "DocumentMoniker": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Bebida.cs",
-              "RelativeDocumentMoniker": "Bebida.cs",
-              "ToolTip": "C:\\universidad\\4-Semestre\\Topicos de Programacion\\aribnb\\Topicos_avanzado_programacion\\restaurante\\Bebida.cs",
-              "RelativeToolTip": "Bebida.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T14:30:00.092Z"
             }
           ]
         }

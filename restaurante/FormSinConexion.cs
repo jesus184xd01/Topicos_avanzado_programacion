@@ -7,31 +7,17 @@ namespace restaurante
 {
     public partial class FormSinConexion : Form
     {
+        private Image _imgConexion = null;
+
         public FormSinConexion()
         {
             InitializeComponent();
             InitUI();
+            CargarImagen();
         }
 
-        private void InitUI()
+        private void CargarImagen()
         {
-            this.Text = "Sin conexión";
-            this.Size = new Size(580, 500);
-            this.StartPosition = FormStartPosition.CenterScreen;
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.BackColor = Color.FromArgb(245, 240, 230);
-
-            // ── Imagen ────────────────────────────────────────────
-            var pic = new PictureBox
-            {
-                Location = new Point(155, 25),
-                Size = new Size(160, 160),
-                SizeMode = PictureBoxSizeMode.Zoom,
-                BackColor = Color.Transparent
-            };
-
             try
             {
                 string ruta = Path.Combine(
@@ -40,10 +26,22 @@ namespace restaurante
                 {
                     byte[] bytes = File.ReadAllBytes(ruta);
                     using (var ms = new MemoryStream(bytes))
-                        pic.Image = new Bitmap(ms);
+                        _imgConexion = new Bitmap(ms);
                 }
             }
             catch { }
+        }
+
+        private void InitUI()
+        {
+            this.Text = "Sin conexión";
+            this.Size = new Size(480, 460);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.BackColor = Color.FromArgb(245, 240, 230);
+            this.Paint += FormSinConexion_Paint;   // ← dibujamos la imagen aquí
 
             // ── Título ────────────────────────────────────────────
             var lblTitulo = new Label
@@ -53,22 +51,24 @@ namespace restaurante
                 ForeColor = Color.FromArgb(180, 50, 20),
                 AutoSize = false,
                 Size = new Size(440, 38),
-                Location = new Point(20, 200),
-                TextAlign = ContentAlignment.MiddleCenter
+                Location = new Point(20, 195),
+                TextAlign = ContentAlignment.MiddleCenter,
+                BackColor = Color.Transparent
             };
 
             // ── Mensaje ───────────────────────────────────────────
             var lblMensaje = new Label
             {
                 Text = "La aplicación está configurada en modo remoto\n" +
-                            "pero no se detectó conexión a internet.\n\n" +
-                            "Verifica tu conexión e intenta de nuevo.",
+                       "pero no se detectó conexión a internet.\n\n" +
+                       "Verifica tu conexión e intenta de nuevo.",
                 Font = new Font("Segoe UI", 9.5f),
                 ForeColor = Color.FromArgb(80, 60, 40),
                 AutoSize = false,
-                Size = new Size(420, 80),
+                Size = new Size(420, 90),
                 Location = new Point(30, 245),
-                TextAlign = ContentAlignment.MiddleCenter
+                TextAlign = ContentAlignment.MiddleCenter,
+                BackColor = Color.Transparent
             };
 
             // ── Botón reintentar ──────────────────────────────────
@@ -77,7 +77,7 @@ namespace restaurante
                 Text = "Reintentar",
                 Font = new Font("Segoe UI", 10f, FontStyle.Bold),
                 Size = new Size(140, 38),
-                Location = new Point(90, 338),
+                Location = new Point(90, 370),
                 BackColor = Color.FromArgb(46, 125, 50),
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
@@ -96,7 +96,7 @@ namespace restaurante
                 Text = "Salir",
                 Font = new Font("Segoe UI", 10f, FontStyle.Bold),
                 Size = new Size(140, 38),
-                Location = new Point(248, 338),
+                Location = new Point(248, 370),
                 BackColor = Color.FromArgb(198, 40, 40),
                 ForeColor = Color.White,
                 FlatStyle = FlatStyle.Flat,
@@ -111,8 +111,19 @@ namespace restaurante
 
             this.Controls.AddRange(new Control[]
             {
-                pic, lblTitulo, lblMensaje, btnReintentar, btnSalir
+                lblTitulo, lblMensaje, btnReintentar, btnSalir
             });
+        }
+
+        // ── Dibuja la imagen directamente sobre el Form ───────────
+        private void FormSinConexion_Paint(object sender, PaintEventArgs e)
+        {
+            if (_imgConexion == null) return;
+
+            // Centrada horizontalmente, Y=15, 160x160 px
+            int x = (this.ClientSize.Width - 160) / 2;
+            int y = 15;
+            e.Graphics.DrawImage(_imgConexion, x, y, 160, 160);
         }
 
         private void FormSinConexion_Load(object sender, EventArgs e) { }
