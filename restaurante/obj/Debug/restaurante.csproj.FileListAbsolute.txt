@@ -41,3 +41,4 @@ C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_progra
 C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.exe
 C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.pdb
 C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.formulario_administrador.resources
+C:\universidad\4-Semestre\Topicos de Programacion\aribnb\Topicos_avanzado_programacion\restaurante\obj\Debug\restaurante.FormPedido.resources

@@ -13,6 +13,10 @@ namespace restaurante
             AppDomain.CurrentDomain.BaseDirectory;
 
         private string _imagenUrl;
+        private int _id;
+        private string _tipo;
+        private string _nombre;
+        private decimal _precio;
 
         public alimento_card() { InitializeComponent(); }
 
@@ -35,7 +39,6 @@ namespace restaurante
             img_icono.Image = null;
             img_icono.SizeMode = PictureBoxSizeMode.Zoom;
 
-            // Capturar tamaño del PictureBox antes de entrar al Task
             int maxAncho = img_icono.Width > 0 ? img_icono.Width : 200;
             int maxAlto = img_icono.Height > 0 ? img_icono.Height : 200;
 
@@ -52,18 +55,15 @@ namespace restaurante
 
                     if (rutaFinal == null) return null;
 
-                    // Leer bytes sin bloquear el archivo
                     byte[] bytes = File.ReadAllBytes(rutaFinal);
 
                     Bitmap original;
                     using (var ms = new MemoryStream(bytes))
                         original = new Bitmap(ms);
 
-                    // Si ya cabe en el PictureBox no redimensionar
                     if (original.Width <= maxAncho && original.Height <= maxAlto)
                         return original;
 
-                    // Calcular nueva escala manteniendo proporción
                     float escalaX = (float)maxAncho / original.Width;
                     float escalaY = (float)maxAlto / original.Height;
                     float escala = Math.Min(escalaX, escalaY);
@@ -71,7 +71,6 @@ namespace restaurante
                     int nuevoAncho = (int)(original.Width * escala);
                     int nuevoAlto = (int)(original.Height * escala);
 
-                    // Redimensionar con alta calidad
                     var redimensionada = new Bitmap(nuevoAncho, nuevoAlto);
                     using (var g = Graphics.FromImage(redimensionada))
                     {
@@ -130,6 +129,10 @@ namespace restaurante
             lbl_precio.Text = "$" + alimento.Precio.ToString("F2");
             txt_descripcion.Text = alimento.Descripcion;
             _imagenUrl = alimento.ImagenUrl;
+            _id = alimento.PlatilloId;
+            _tipo = "Platillo";
+            _nombre = alimento.Nombre;
+            _precio = alimento.Precio;
         }
 
         // ── Constructor para Bebida ───────────────────────────────
@@ -140,6 +143,10 @@ namespace restaurante
             lbl_precio.Text = "$" + bebida.Precio.ToString("F2") + " · " + bebida.Capacidad;
             txt_descripcion.Text = bebida.Descripcion;
             _imagenUrl = bebida.ImagenUrl;
+            _id = bebida.BebidaId;
+            _tipo = "Bebida";
+            _nombre = bebida.Nombre;
+            _precio = bebida.Precio;
         }
 
         // ── Constructor para Postre ───────────────────────────────
@@ -150,6 +157,19 @@ namespace restaurante
             lbl_precio.Text = "$" + postre.Precio.ToString("F2");
             txt_descripcion.Text = postre.Descripcion;
             _imagenUrl = postre.ImagenUrl;
+            _id = postre.PostreId;
+            _tipo = "Postre";
+            _nombre = postre.Nombre;
+            _precio = postre.Precio;
+        }
+
+        // ── Botón agregar al pedido ───────────────────────────────
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = Application.OpenForms["Form1"] as Form1;
+            if (form1 == null) return;
+
+            form1.PasarAlPedido(_id, _tipo, _nombre, _precio);
         }
     }
 }

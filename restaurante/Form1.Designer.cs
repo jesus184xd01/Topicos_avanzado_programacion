@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel_fondo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_administrar = new System.Windows.Forms.Button();
             this.panel_container = new System.Windows.Forms.Panel();
             this.lbl_title_desserts = new System.Windows.Forms.Label();
@@ -44,15 +43,15 @@
             this.btn_almuerzo = new System.Windows.Forms.Button();
             this.btn_desayuno = new System.Windows.Forms.Button();
             this.title_lbl = new System.Windows.Forms.Label();
+            this.btn_pedido = new System.Windows.Forms.Button();
             this.panel_fondo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_container.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_fondo
             // 
             this.panel_fondo.BackgroundImage = global::restaurante.Properties.Resources.fondo_menu;
-            this.panel_fondo.Controls.Add(this.pictureBox1);
+            this.panel_fondo.Controls.Add(this.btn_pedido);
             this.panel_fondo.Controls.Add(this.btn_administrar);
             this.panel_fondo.Controls.Add(this.panel_container);
             this.panel_fondo.Controls.Add(this.btn_cena);
@@ -66,18 +65,6 @@
             this.panel_fondo.Size = new System.Drawing.Size(1192, 840);
             this.panel_fondo.TabIndex = 0;
             this.panel_fondo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_fondo_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = global::restaurante.Properties.Resources.logo;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 218);
-            this.pictureBox1.TabIndex = 11;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btn_administrar
             // 
@@ -120,7 +107,7 @@
             this.lbl_title_desserts.Image = global::restaurante.Properties.Resources.fondo_foods;
             this.lbl_title_desserts.Location = new System.Drawing.Point(505, 312);
             this.lbl_title_desserts.Name = "lbl_title_desserts";
-            this.lbl_title_desserts.Size = new System.Drawing.Size(184, 49);
+            this.lbl_title_desserts.Size = new System.Drawing.Size(179, 49);
             this.lbl_title_desserts.TabIndex = 4;
             this.lbl_title_desserts.Text = "POSTRES";
             // 
@@ -133,7 +120,7 @@
             this.lbl_title_drinks.Image = global::restaurante.Properties.Resources.fondo_foods;
             this.lbl_title_drinks.Location = new System.Drawing.Point(789, 8);
             this.lbl_title_drinks.Name = "lbl_title_drinks";
-            this.lbl_title_drinks.Size = new System.Drawing.Size(178, 49);
+            this.lbl_title_drinks.Size = new System.Drawing.Size(173, 49);
             this.lbl_title_drinks.TabIndex = 4;
             this.lbl_title_drinks.Text = "BEBIDAS";
             // 
@@ -146,7 +133,7 @@
             this.lbl_title_meals.Image = global::restaurante.Properties.Resources.fondo_foods;
             this.lbl_title_meals.Location = new System.Drawing.Point(233, 8);
             this.lbl_title_meals.Name = "lbl_title_meals";
-            this.lbl_title_meals.Size = new System.Drawing.Size(229, 49);
+            this.lbl_title_meals.Size = new System.Drawing.Size(226, 49);
             this.lbl_title_meals.TabIndex = 3;
             this.lbl_title_meals.Text = "PLATILLOS";
             // 
@@ -254,6 +241,20 @@
             this.title_lbl.TabIndex = 0;
             this.title_lbl.Text = "MENU MEXICANO";
             // 
+            // btn_pedido
+            // 
+            this.btn_pedido.BackColor = System.Drawing.Color.White;
+            this.btn_pedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_pedido.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_pedido.Font = new System.Drawing.Font("Mistral", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pedido.Location = new System.Drawing.Point(671, 776);
+            this.btn_pedido.Name = "btn_pedido";
+            this.btn_pedido.Size = new System.Drawing.Size(245, 42);
+            this.btn_pedido.TabIndex = 11;
+            this.btn_pedido.Text = "PEDIDO";
+            this.btn_pedido.UseVisualStyleBackColor = false;
+            this.btn_pedido.Click += new System.EventHandler(this.btn_pedido_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -266,7 +267,6 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel_fondo.ResumeLayout(false);
             this.panel_fondo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_container.ResumeLayout(false);
             this.panel_container.PerformLayout();
             this.ResumeLayout(false);
@@ -289,7 +289,7 @@
         private System.Windows.Forms.Label lbl_title_desserts;
         private System.Windows.Forms.Label lbl_title_drinks;
         private System.Windows.Forms.Label lbl_title_meals;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_pedido;
     }
 }
 

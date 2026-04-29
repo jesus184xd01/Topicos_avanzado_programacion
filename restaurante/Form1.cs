@@ -16,6 +16,7 @@ namespace restaurante
 
         // ── Instancia del DAO ─────────────────────────────────────
         private readonly RestauranteDAO dao = new RestauranteDAO();
+        private FormPedido _formPedido;
 
         public Form1()
         {
@@ -42,7 +43,7 @@ namespace restaurante
                 (panel_fondo.Width - title_lbl.Width) / 2, 10
             );
 
-            // ── Botones categorías ───────────────────────────────
+            // ── Botones categorías — centrados ───────────────────
             int espaciado = 50;
             int anchoBotones = (btn_desayuno.Width * 4) + (espaciado * 3);
             int startX = (panel_fondo.Width / 2) - (anchoBotones / 2);
@@ -53,10 +54,16 @@ namespace restaurante
             btn_comida.Location = new Point(startX + (btn_desayuno.Width + espaciado) * 2, posY);
             btn_cena.Location = new Point(startX + (btn_desayuno.Width + espaciado) * 3, posY);
 
-            // ── Botón administrar ────────────────────────────────
+            // ── Botón administrar — extremo izquierdo ─────────────
             btn_administrar.Location = new Point(
-                btn_cena.Location.X + btn_cena.Width + espaciado,
+                20,
                 posY + (btn_cena.Height / 2) - (btn_administrar.Height / 2)
+            );
+
+            // ── Botón pedido — extremo derecho ────────────────────
+            btn_pedido.Location = new Point(
+                panel_fondo.Width - btn_pedido.Width - 20,
+                posY + (btn_cena.Height / 2) - (btn_pedido.Height / 2)
             );
 
             // ── Panel contenedor ─────────────────────────────────
@@ -259,7 +266,6 @@ namespace restaurante
         // ══════════════════════════════════════════════════════════
         private async Task CargarCategoria(string tipoDia)
         {
-            // Deshabilitar botones durante la carga
             btn_desayuno.Enabled = false;
             btn_almuerzo.Enabled = false;
             btn_comida.Enabled = false;
@@ -270,7 +276,6 @@ namespace restaurante
             lbl_title_drinks.Text = $"Bebidas — {titulo}";
             lbl_title_desserts.Text = $"Postres — {titulo}";
 
-            // Consultar BD en segundo plano
             List<Platillo> platillos = null;
             List<Bebida> bebidas = null;
             List<Postre> postres = null;
@@ -282,12 +287,10 @@ namespace restaurante
                 postres = dao.ObtenerPostres(tipoDia);
             });
 
-            // Cargar cards en UI — imágenes cargan solas en async
             CargarCardsPlatillos(panel_meals, platillos);
             CargarCardsBebidas(panel_drinks, bebidas);
             CargarCardsPostres(panel_desserts, postres);
 
-            // Rehabilitar botones
             btn_desayuno.Enabled = true;
             btn_almuerzo.Enabled = true;
             btn_comida.Enabled = true;
@@ -318,24 +321,76 @@ namespace restaurante
         {
             settings(sender, e);
             await CargarCategoria("desayuno");
-
-            //trackear coneccion
             ConnectionMonitor.Iniciar(this);
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ConnectionMonitor.Detener();   // ← detener el monitor al cerrar
+            ConnectionMonitor.Detener();
         }
 
+        // ══════════════════════════════════════════════════════════
+        //  BOTÓN ADMINISTRAR
+        // ══════════════════════════════════════════════════════════
         private void btn_administrar_Click_1(object sender, EventArgs e)
         {
             management frmManagement = new management();
             frmManagement.ShowDialog();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        // ══════════════════════════════════════════════════════════
+        //  BOTÓN PEDIDO
+        // ══════════════════════════════════════════════════════════
+        private void btn_pedido_Click(object sender, EventArgs e)
         {
+            if (_formPedido == null || _formPedido.IsDisposed)
+            {
+                _formPedido = new FormPedido();
+                _formPedido.Show();
+            }
+            else
+            {
+                _formPedido.BringToFront();
+            }
         }
+
+
+        public void PasarAlPedido(int id, string tipo, string nombre, decimal precio)
+        {
+            // Abrir el form si no está abierto
+            if (_formPedido == null || _formPedido.IsDisposed)
+            {
+                _formPedido = new FormPedido();
+                _formPedido.Show();
+            }
+
+            // Agregar el item
+            _formPedido.AgregarItem(id, tipo, nombre, precio);
+
+            // ── Parpadeo verde en btn_pedido ──────────────────────
+            Color colorOriginal = btn_pedido.BackColor;
+            int parpadeos = 0;
+
+            var timer = new System.Windows.Forms.Timer { Interval = 120 };
+            timer.Tick += (s, ev) =>
+            {
+                btn_pedido.BackColor = parpadeos % 2 == 0
+                    ? Color.FromArgb(46, 125, 50)
+                    : colorOriginal;
+
+                parpadeos++;
+
+                if (parpadeos >= 6)
+                {
+                    btn_pedido.BackColor = colorOriginal;
+                    timer.Stop();
+                    timer.Dispose();
+                }
+            };
+            timer.Start();
+        }
+
+
+        private void pictureBox1_Click(object sender, EventArgs e) { }
     }
 }

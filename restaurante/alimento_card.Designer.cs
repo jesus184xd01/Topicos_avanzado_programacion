@@ -35,6 +35,7 @@
             this.txt_descripcion = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.img_icono = new System.Windows.Forms.PictureBox();
+            this.btn_add = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.img_icono)).BeginInit();
             this.SuspendLayout();
@@ -42,6 +43,7 @@
             // panel1
             // 
             this.panel1.BackgroundImage = global::restaurante.Properties.Resources.fondo_food_card;
+            this.panel1.Controls.Add(this.btn_add);
             this.panel1.Controls.Add(this.precio_lbl);
             this.panel1.Controls.Add(this.lbl_nombre);
             this.panel1.Controls.Add(this.lbl_precio);
@@ -49,9 +51,8 @@
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.img_icono);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(546, 346);
+            this.panel1.Size = new System.Drawing.Size(485, 277);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -61,9 +62,9 @@
             this.precio_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.precio_lbl.ForeColor = System.Drawing.Color.White;
             this.precio_lbl.Image = global::restaurante.Properties.Resources.fondo_food_card;
-            this.precio_lbl.Location = new System.Drawing.Point(418, 172);
+            this.precio_lbl.Location = new System.Drawing.Point(372, 138);
             this.precio_lbl.Name = "precio_lbl";
-            this.precio_lbl.Size = new System.Drawing.Size(0, 38);
+            this.precio_lbl.Size = new System.Drawing.Size(0, 32);
             this.precio_lbl.TabIndex = 6;
             // 
             // lbl_nombre
@@ -72,9 +73,9 @@
             this.lbl_nombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_nombre.ForeColor = System.Drawing.Color.White;
             this.lbl_nombre.Image = global::restaurante.Properties.Resources.fondo_food_card;
-            this.lbl_nombre.Location = new System.Drawing.Point(308, 19);
+            this.lbl_nombre.Location = new System.Drawing.Point(274, 15);
             this.lbl_nombre.Name = "lbl_nombre";
-            this.lbl_nombre.Size = new System.Drawing.Size(98, 32);
+            this.lbl_nombre.Size = new System.Drawing.Size(85, 29);
             this.lbl_nombre.TabIndex = 5;
             this.lbl_nombre.Text = "label3";
             // 
@@ -84,9 +85,9 @@
             this.lbl_precio.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_precio.ForeColor = System.Drawing.Color.White;
             this.lbl_precio.Image = global::restaurante.Properties.Resources.fondo_food_card;
-            this.lbl_precio.Location = new System.Drawing.Point(349, 177);
+            this.lbl_precio.Location = new System.Drawing.Point(274, 138);
             this.lbl_precio.Name = "lbl_precio";
-            this.lbl_precio.Size = new System.Drawing.Size(57, 38);
+            this.lbl_precio.Size = new System.Drawing.Size(50, 32);
             this.lbl_precio.TabIndex = 4;
             this.lbl_precio.Text = "....";
             // 
@@ -97,12 +98,11 @@
             this.txt_descripcion.Enabled = false;
             this.txt_descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_descripcion.ForeColor = System.Drawing.Color.White;
-            this.txt_descripcion.Location = new System.Drawing.Point(302, 68);
-            this.txt_descripcion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txt_descripcion.Location = new System.Drawing.Point(268, 54);
             this.txt_descripcion.Multiline = true;
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txt_descripcion.Size = new System.Drawing.Size(230, 100);
+            this.txt_descripcion.Size = new System.Drawing.Size(205, 80);
             this.txt_descripcion.TabIndex = 2;
             // 
             // label1
@@ -111,29 +111,40 @@
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Image = global::restaurante.Properties.Resources.fondo_food_card;
-            this.label1.Location = new System.Drawing.Point(308, 15);
+            this.label1.Location = new System.Drawing.Point(274, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 39);
+            this.label1.Size = new System.Drawing.Size(0, 32);
             this.label1.TabIndex = 1;
             // 
             // img_icono
             // 
             this.img_icono.InitialImage = null;
-            this.img_icono.Location = new System.Drawing.Point(14, 15);
-            this.img_icono.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.img_icono.Location = new System.Drawing.Point(12, 12);
             this.img_icono.Name = "img_icono";
-            this.img_icono.Size = new System.Drawing.Size(263, 200);
+            this.img_icono.Size = new System.Drawing.Size(234, 201);
             this.img_icono.TabIndex = 0;
             this.img_icono.TabStop = false;
             // 
+            // btn_add
+            // 
+            this.btn_add.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btn_add.Font = new System.Drawing.Font("Bauhaus 93", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_add.ForeColor = System.Drawing.Color.White;
+            this.btn_add.Location = new System.Drawing.Point(430, 173);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(43, 40);
+            this.btn_add.TabIndex = 7;
+            this.btn_add.Text = "+";
+            this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            // 
             // alimento_card
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(546, 230);
+            this.ClientSize = new System.Drawing.Size(485, 225);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "alimento_card";
             this.Text = "alimento_card";
             this.panel1.ResumeLayout(false);
@@ -152,5 +163,6 @@
         private System.Windows.Forms.Label lbl_precio;
         private System.Windows.Forms.Label lbl_nombre;
         private System.Windows.Forms.Label precio_lbl;
+        private System.Windows.Forms.Button btn_add;
     }
 }
