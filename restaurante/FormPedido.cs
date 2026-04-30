@@ -566,9 +566,19 @@ namespace restaurante
                 }
             }
 
-            // Todo válido — aquí irá la llamada al DAO
-            MessageBox.Show("Pedido listo para registrar.", "OK",
+            // Todo válido
+            MessageBox.Show("¡Pedido pagado!", "Listo",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            // Limpiar el form después de confirmar
+            _items.Clear();
+            dgv_items.Rows.Clear();
+            txt_monto.Text = "";
+            txt_mesa.Text = "";
+            txt_notas.Text = "";
+            lbl_cambio_entregado_tit.Visible = false;
+            lbl_cambio_entregado.Visible = false;
+            ActualizarResumen();
         }
 
         // ══════════════════════════════════════════════════════════
